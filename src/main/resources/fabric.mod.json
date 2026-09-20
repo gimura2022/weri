@@ -7,7 +7,7 @@
 	"authors": [],
 	"contact": {
 		"homepage": "https://example.com",
-		"sources": "https://example.com",
+		"sources": "https://example.com"
 	},
 	"license": "0BSD",
 	"environment": "client",
