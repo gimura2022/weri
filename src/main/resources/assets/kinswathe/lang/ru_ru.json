@@ -1,0 +1,8 @@
+{
+    "announcement.title.neutral": "Нейтралы",
+    "item.kinswathe.hunting_knife": "Нож охотника",
+    "shop.purchase_failed": "Недостаточно монет!",
+    "item.kinswathe.icon_ability_cooldown_refresh": "Сброс кулдауна способностей.",
+    "item.kinswathe.icon_potion_effect_refresh": "Сброс всех эффектов.",
+    "item.kinswathe.icon_weapon_cooldown_refresh": "Сброс перезарядки оружий."
+}
