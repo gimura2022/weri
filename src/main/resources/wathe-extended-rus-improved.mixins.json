@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "org.4mur.wathe_extended_rus_improved.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
