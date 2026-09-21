@@ -3,6 +3,20 @@ plugins {
 	`maven-publish`
 }
 
+fun String.runCommand(workingDir: File = file("./")): String {
+    val parts = this.split("\\s".toRegex())
+    val proc = ProcessBuilder(*parts.toTypedArray())
+        .directory(workingDir)
+        .redirectOutput(ProcessBuilder.Redirect.PIPE)
+        .redirectError(ProcessBuilder.Redirect.PIPE)
+        .start()
+
+    proc.waitFor(1, TimeUnit.MINUTES)
+    return proc.inputStream.bufferedReader().readText().trim()
+}
+
+version = "v" + version + "-rev" + "git rev-parse --short HEAD".runCommand()
+
 repositories {
     exclusiveContent {
         forRepository {
