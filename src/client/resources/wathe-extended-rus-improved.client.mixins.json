@@ -6,7 +6,7 @@
     "CloudMessageSendingMixin",
     "CloudMessageRenderMixin",
     "EntityRendererAccessor",
-    "AbstractClientPlayerEntityCloudMessageQueueHolder"
+    "AbstractClientPlayerEntityCloudMessageQueueHolderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
