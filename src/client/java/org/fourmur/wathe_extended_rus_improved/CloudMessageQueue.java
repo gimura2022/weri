@@ -16,7 +16,11 @@ import net.minecraft.util.math.Vec3d;
 
 public final class CloudMessageQueue {
     public static final int MAX_ELEMENTS = 3;
+
     public static final double MAX_MESSAGE_LIFETIME = 80;
+    public static final double MESSAGE_IN_TIME = 2.0;
+    public static final double MESSAGE_OUT_TIME = 2.0;
+
     public static final double RENDER_Y_OFFSET = 0.2;
     public static final double RENDER_Y_STEP = 0.2;
     public static final float RENDER_TEXT_SCALE = 0.016f;
@@ -65,11 +69,18 @@ public final class CloudMessageQueue {
             return;
 
         double offset = messages.indexOf(message) * RENDER_Y_STEP;
+        float scale = RENDER_TEXT_SCALE;
+
+        if (message.age <= MESSAGE_IN_TIME)
+            scale *= message.age / MESSAGE_IN_TIME;
+
+        if ((MAX_MESSAGE_LIFETIME - message.age) <= MESSAGE_OUT_TIME)
+            scale *= (MAX_MESSAGE_LIFETIME - message.age) / MESSAGE_OUT_TIME;
 
         matrices.push();
         matrices.translate(pos.x, pos.y + 0.5 + RENDER_Y_OFFSET + offset, pos.z);
         matrices.multiply(((EntityRendererAccessor) playerRenderer).wathe_extended_rus_improved$getDispatcher().getRotation());
-		matrices.scale(RENDER_TEXT_SCALE, -RENDER_TEXT_SCALE, RENDER_TEXT_SCALE);
+		matrices.scale(scale, -scale, scale);
 
         TextRenderer textRenderer = playerRenderer.getTextRenderer();
 
