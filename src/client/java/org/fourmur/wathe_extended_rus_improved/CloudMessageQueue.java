@@ -5,7 +5,7 @@ import java.util.List;
 
 public final class CloudMessageQueue {
     public static final int MAX_ELEMENTS = 3;
-    public static final int MESSAGE_LIFETIME = 200;
+    public static final int MESSAGE_LIFETIME = 80;
 
     private final List<Message> messages = new ArrayList<>();
 
