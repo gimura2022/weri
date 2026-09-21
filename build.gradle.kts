@@ -53,9 +53,12 @@ repositories {
 }
 
 loom {
+	splitEnvironmentSourceSets()
+
 	mods {
 		register("wathe-extended-rus-improved") {
 			sourceSet(sourceSets.main.get())
+			sourceSet(sourceSets.getByName("client"))
 		}
 	}
 
