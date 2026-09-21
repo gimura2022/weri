@@ -5,8 +5,9 @@
 	"mixins": [
     "CloudMessageSendingMixin",
     "CloudMessageRenderMixin",
-    "EntityRendererAccessor",
-    "AbstractClientPlayerEntityCloudMessageQueueHolderMixin"
+    "CloudMessageMaxLengthMixin",
+    "AbstractClientPlayerEntityCloudMessageQueueHolderMixin",
+    "EntityRendererAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1
