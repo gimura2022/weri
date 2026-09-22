@@ -1,21 +1,40 @@
 package org.fourmur.wathe_extended_rus_improved.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.Unique;
 
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ChatScreen;
-import net.minecraft.client.gui.widget.TextFieldWidget;
+import net.minecraft.text.Text;
 
 @Mixin(ChatScreen.class)
 public final class CloudMessageMaxLengthMixin {
-    @Shadow
-    private TextFieldWidget chatField;
+    private static final int MAX_MESSAGE_LENGTH = 32;
 
-    @Inject(method = "render", at = @At(value = "TAIL"))
-    private void init(CallbackInfo info) {
-	    this.chatField.setMaxLength(32);
-    }
+    @Unique
+    private final ChatScreen chatScreen = (ChatScreen) (Object) this;
+
+    @Overwrite
+	public void sendMessage(String chatText, boolean addToHistory) {
+        MinecraftClient client = MinecraftClient.getInstance();
+		chatText = chatScreen.normalize(chatText);
+
+		if (!chatText.isEmpty()) {
+			if (addToHistory) {
+				client.inGameHud.getChatHud().addToMessageHistory(chatText);
+			}
+
+			if (chatText.startsWith("/")) {
+				client.player.networkHandler.sendChatCommand(chatText.substring(1));
+			} else {
+                if (chatText.length() > MAX_MESSAGE_LENGTH) {
+                    client.player.sendMessage(Text.translatable("chat.wathe-extended-rus-improved.message_too_long"));
+                    return;
+                }
+
+				client.player.networkHandler.sendChatMessage(chatText);
+			}
+		}
+	}
 }
