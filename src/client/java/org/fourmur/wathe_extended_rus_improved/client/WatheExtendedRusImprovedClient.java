@@ -1,6 +1,7 @@
 package org.fourmur.wathe_extended_rus_improved.client;
 
 import org.fourmur.wathe_extended_rus_improved.network.CloudMessageClientboundPayload;
+import org.fourmur.wathe_extended_rus_improved.client.network.ClientCloudMessageReceiver;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;

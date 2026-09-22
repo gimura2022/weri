@@ -1,4 +1,4 @@
-package org.fourmur.wathe_extended_rus_improved.client;
+package org.fourmur.wathe_extended_rus_improved.client.network;
 
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.network.ClientPlayerEntity;
