@@ -1,4 +1,6 @@
-package org.fourmur.wathe_extended_rus_improved;
+package org.fourmur.wathe_extended_rus_improved.index;
+
+import org.fourmur.wathe_extended_rus_improved.WatheExtendedRusImproved;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
