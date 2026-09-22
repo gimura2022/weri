@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"1": "wathe-extended-rus-improved:item/candle",
-		"2": "wathe-extended-rus-improved:item/candle_fire",
+		"2": "wathe-extended-rus-improved:item/fire",
 		"particle": "wathe-extended-rus-improved:item/candle"
 	},
 	"elements": [
