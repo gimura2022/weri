@@ -13,7 +13,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": ["org.fourmur.wathe_extended_rus_improved.WatheExtendedRusImproved"],
-    "client": ["org.fourmur.wathe_extended_rus_improved.WatheExtendedRusImprovedClient"]
+    "client": ["org.fourmur.wathe_extended_rus_improved.client.WatheExtendedRusImprovedClient"]
 	},
 	"mixins": [
 		"wathe-extended-rus-improved.mixins.json",

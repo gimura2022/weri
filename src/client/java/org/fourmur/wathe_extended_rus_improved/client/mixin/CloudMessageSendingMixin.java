@@ -1,4 +1,4 @@
-package org.fourmur.wathe_extended_rus_improved.mixin;
+package org.fourmur.wathe_extended_rus_improved.client.mixin;
 
 import org.fourmur.wathe_extended_rus_improved.CloudMessagePacket;
 import org.spongepowered.asm.mixin.Mixin;

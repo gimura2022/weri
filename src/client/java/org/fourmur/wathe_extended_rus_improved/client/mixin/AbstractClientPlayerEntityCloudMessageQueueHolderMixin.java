@@ -1,7 +1,7 @@
-package org.fourmur.wathe_extended_rus_improved.mixin;
+package org.fourmur.wathe_extended_rus_improved.client.mixin;
 
-import org.fourmur.wathe_extended_rus_improved.CloudMessageQueue;
-import org.fourmur.wathe_extended_rus_improved.mixininterface.CloudMessageQueueHolder;
+import org.fourmur.wathe_extended_rus_improved.client.CloudMessageQueue;
+import org.fourmur.wathe_extended_rus_improved.client.mixininterface.CloudMessageQueueHolder;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 

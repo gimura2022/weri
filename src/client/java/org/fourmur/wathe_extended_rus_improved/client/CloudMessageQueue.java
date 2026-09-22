@@ -1,9 +1,9 @@
-package org.fourmur.wathe_extended_rus_improved;
+package org.fourmur.wathe_extended_rus_improved.client;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.fourmur.wathe_extended_rus_improved.mixin.EntityRendererAccessor;
+import org.fourmur.wathe_extended_rus_improved.client.mixin.EntityRendererAccessor;
 
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.network.AbstractClientPlayerEntity;

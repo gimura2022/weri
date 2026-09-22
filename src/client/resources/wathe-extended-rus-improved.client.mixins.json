@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "org.fourmur.wathe_extended_rus_improved.mixin",
+	"package": "org.fourmur.wathe_extended_rus_improved.client.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
     "CloudMessageSendingMixin",
