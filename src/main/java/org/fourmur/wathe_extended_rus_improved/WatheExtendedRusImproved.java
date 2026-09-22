@@ -21,8 +21,12 @@ public final class WatheExtendedRusImproved implements ModInitializer {
 	public void onInitialize() {
         Items.initialize();
 
+        registerNetwork();
+	}
+
+    private void registerNetwork() {
         CloudMessageClientboundPayload.register();
         CloudMessageServerboundPayload.register();
         CloudMessageServerReceiver.register();
-	}
+    }
 }
