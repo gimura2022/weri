@@ -17,6 +17,6 @@ public final class WatheExtendedRusImproved implements ModInitializer {
 	@Override
 	public void onInitialize() {
         Items.initialize();
-        CloudMessagePacket.registerPacket();
+        CloudMessagePacket.register();
 	}
 }

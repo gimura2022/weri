@@ -14,7 +14,7 @@ import net.minecraft.util.Uuids;
 public final class CloudMessagePacket {
     public static final Identifier PACKET_ID = WatheExtendedRusImproved.id("recive_cloud_message");
 
-    public static void registerPacket() {
+    public static void register() {
         PayloadTypeRegistry.playS2C().register(ClientboundPayload.ID, ClientboundPayload.PACKET_CODEC);
         PayloadTypeRegistry.playC2S().register(ServerboundPayload.ID, ServerboundPayload.PACKET_CODEC);
 
