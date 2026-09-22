@@ -1,4 +1,4 @@
-package org.fourmur.wathe_extended_rus_improved.client.mixin;
+package org.fourmur.wathe_extended_rus_improved.client.mixin.cloudmessage;
 
 import org.fourmur.wathe_extended_rus_improved.client.mixininterface.CloudMessageQueueHolder;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,7 +13,7 @@ import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 
 @Mixin(PlayerEntityRenderer.class)
-public final class CloudMessageRenderMixin {
+public final class PlayerEntityRendererMixin {
     @Unique
     private final PlayerEntityRenderer renderer = (PlayerEntityRenderer) (Object) this;
 

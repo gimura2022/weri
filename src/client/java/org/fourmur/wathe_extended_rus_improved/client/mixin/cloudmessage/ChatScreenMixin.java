@@ -1,4 +1,4 @@
-package org.fourmur.wathe_extended_rus_improved.client.mixin;
+package org.fourmur.wathe_extended_rus_improved.client.mixin.cloudmessage;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -9,7 +9,7 @@ import net.minecraft.client.gui.screen.ChatScreen;
 import net.minecraft.text.Text;
 
 @Mixin(ChatScreen.class)
-public final class CloudMessageMaxLengthMixin {
+public final class ChatScreenMixin {
     private static final int MAX_MESSAGE_LENGTH = 32;
 
     @Unique
