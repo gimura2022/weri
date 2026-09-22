@@ -15,6 +15,12 @@ public final class CloudMessageClientReceiver implements Runnable {
         this.context = context;
     }
 
+    public static void register() {
+        ClientPlayNetworking.registerGlobalReceiver(CloudMessageClientboundPayload.ID, (payload, context) -> {
+            context.client().execute(new CloudMessageClientReceiver(payload, context));
+        });
+    }
+
 	@Override
 	public void run() {
         ClientPlayerEntity sender = (ClientPlayerEntity) context.client().world.getPlayerByUuid(payload.player());
