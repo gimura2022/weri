@@ -1,8 +1,8 @@
 package org.fourmur.wathe_extended_rus_improved;
 
 import org.fourmur.wathe_extended_rus_improved.network.CloudMessageClientboundPayload;
+import org.fourmur.wathe_extended_rus_improved.network.CloudMessageServerReceiver;
 import org.fourmur.wathe_extended_rus_improved.network.CloudMessageServerboundPayload;
-import org.fourmur.wathe_extended_rus_improved.network.ServerCloudMessageReceiver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +23,6 @@ public final class WatheExtendedRusImproved implements ModInitializer {
 
         CloudMessageClientboundPayload.register();
         CloudMessageServerboundPayload.register();
-        ServerCloudMessageReceiver.register();
+        CloudMessageServerReceiver.register();
 	}
 }
