@@ -15,7 +15,7 @@ fun String.runCommand(workingDir: File = file("./")): String {
     return proc.inputStream.bufferedReader().readText().trim()
 }
 
-version = "v" + version + "+" + "git rev-parse --short HEAD".runCommand()
+version = providers.gradleProperty("version").get() + "+" + "git rev-parse --short HEAD".runCommand()
 
 repositories {
     exclusiveContent {
