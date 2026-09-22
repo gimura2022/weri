@@ -5,6 +5,7 @@ import net.minecraft.client.network.ClientPlayerEntity;
 
 import org.fourmur.wathe_extended_rus_improved.client.mixininterface.CloudMessageQueueHolder;
 import org.fourmur.wathe_extended_rus_improved.network.CloudMessageClientboundPayload;
+import org.fourmur.wathe_extended_rus_improved.WatheExtendedRusImproved;
 
 public final class CloudMessageClientReceiver implements Runnable {
     private final CloudMessageClientboundPayload payload;
@@ -27,6 +28,8 @@ public final class CloudMessageClientReceiver implements Runnable {
 
         if (sender == null)
             return;
+
+        WatheExtendedRusImproved.LOGGER.debug(sender + " was sended " + payload.message());
 
         ((CloudMessageQueueHolder) sender).wathe_extended_rus_improved$getQueue().queueMessage(payload.message());
 	}
