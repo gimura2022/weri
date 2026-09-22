@@ -15,7 +15,7 @@ fun String.runCommand(workingDir: File = file("./")): String {
     return proc.inputStream.bufferedReader().readText().trim()
 }
 
-version = "v" + version + "-rev" + "git rev-parse --short HEAD".runCommand()
+version = "v" + version + "+" + "git rev-parse --short HEAD".runCommand()
 
 repositories {
     exclusiveContent {
