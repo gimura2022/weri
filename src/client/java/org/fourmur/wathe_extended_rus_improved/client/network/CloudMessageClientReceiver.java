@@ -1,7 +1,7 @@
 package org.fourmur.wathe_extended_rus_improved.client.network;
 
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.client.network.AbstractClientPlayerEntity;
 
 import org.fourmur.wathe_extended_rus_improved.client.mixininterface.CloudMessageQueueHolder;
 import org.fourmur.wathe_extended_rus_improved.network.CloudMessageClientboundPayload;
@@ -24,7 +24,7 @@ public final class CloudMessageClientReceiver implements Runnable {
 
 	@Override
 	public void run() {
-        ClientPlayerEntity sender = (ClientPlayerEntity) context.client().world.getPlayerByUuid(payload.player());
+        AbstractClientPlayerEntity sender = (AbstractClientPlayerEntity) context.client().world.getPlayerByUuid(payload.player());
 
         if (sender == null)
             return;
