@@ -28,7 +28,7 @@ public final class ChatScreenMixin {
 			if (chatText.startsWith("/")) {
 				client.player.networkHandler.sendChatCommand(chatText.substring(1));
 			} else {
-                if (chatText.length() > MAX_MESSAGE_LENGTH) {
+                if (chatText.length() > MAX_MESSAGE_LENGTH && !client.player.isCreative()) {
                     client.player.sendMessage(Text.translatable("chat.wathe-extended-rus-improved.message_too_long"));
                     return;
                 }
