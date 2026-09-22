@@ -1,5 +1,7 @@
 package org.fourmur.wathe_extended_rus_improved;
 
+import org.fourmur.wathe_extended_rus_improved.network.CloudMessageClientboundPayload;
+
 import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -7,10 +9,10 @@ import net.minecraft.server.network.ServerPlayerEntity;
 public final class ServerCloudMessageReceiver implements Runnable {
     public static final double SENDING_RADIUS = 10.0;
 
-    private final CloudMessagePacket.ServerboundPayload payload;
+    private final CloudMessageClientboundPayload payload;
     private final ServerPlayNetworking.Context context;
 
-    public ServerCloudMessageReceiver(CloudMessagePacket.ServerboundPayload payload, ServerPlayNetworking.Context context) {
+    public ServerCloudMessageReceiver(CloudMessageClientboundPayload payload, ServerPlayNetworking.Context context) {
         this.payload = payload;
         this.context = context;
     }
@@ -23,7 +25,7 @@ public final class ServerCloudMessageReceiver implements Runnable {
             return;
 
         for (ServerPlayerEntity player : PlayerLookup.around(sender.getServerWorld(), sender.getPos(), SENDING_RADIUS)) {
-            ServerPlayNetworking.send(player, new CloudMessagePacket.ClientboundPayload(payload.message(), sender.getUuid()));
+            ServerPlayNetworking.send(player, new CloudMessageClientboundPayload(payload.message(), sender.getUuid()));
         }
 	}
 }
