@@ -94,7 +94,7 @@ public final class CloudMessageQueue {
             vertexConsumers,
             TextRenderer.TextLayerType.NORMAL,
             0,
-            light
+            7340256
         );
 
         matrices.pop();
