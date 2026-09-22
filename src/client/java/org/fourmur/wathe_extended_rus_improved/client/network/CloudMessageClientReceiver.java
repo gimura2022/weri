@@ -6,11 +6,11 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import org.fourmur.wathe_extended_rus_improved.client.mixininterface.CloudMessageQueueHolder;
 import org.fourmur.wathe_extended_rus_improved.network.CloudMessageClientboundPayload;
 
-public final class ClientCloudMessageReceiver implements Runnable {
+public final class CloudMessageClientReceiver implements Runnable {
     private final CloudMessageClientboundPayload payload;
     private final ClientPlayNetworking.Context context;
 
-    public ClientCloudMessageReceiver(CloudMessageClientboundPayload payload, ClientPlayNetworking.Context context) {
+    public CloudMessageClientReceiver(CloudMessageClientboundPayload payload, ClientPlayNetworking.Context context) {
         this.payload = payload;
         this.context = context;
     }
