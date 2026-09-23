@@ -10,7 +10,7 @@ import net.minecraft.text.Text;
 
 @Mixin(ChatScreen.class)
 public final class ChatScreenMixin {
-    private static final int MAX_MESSAGE_LENGTH = 32;
+    private static final int MAX_MESSAGE_LENGTH = 48;
 
     @Unique
     private final ChatScreen chatScreen = (ChatScreen) (Object) this;
