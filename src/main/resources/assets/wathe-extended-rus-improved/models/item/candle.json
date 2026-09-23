@@ -127,8 +127,8 @@
 			"scale": [2, 2, 2]
 		},
 		"fixed": {
-			"rotation": [180, 90, 180],
-			"translation": [0, 11.25, 0],
+			"rotation": [90, 90, -180],
+			"translation": [0, 0, -15],
 			"scale": [2, 2, 2]
 		}
 	},
