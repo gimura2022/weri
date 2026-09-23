@@ -64,6 +64,11 @@ repositories {
         name = "WispForest"
         url = uri("https://maven.wispforest.io/releases")
     }
+
+    maven {
+		name = "Gegy"
+		url = uri("https://maven.gegy.dev")
+	}
 }
 
 loom {
@@ -85,6 +90,9 @@ dependencies {
 	modImplementation("net.fabricmc:fabric-loader:${providers.gradleProperty("loader_version").get()}")
 
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${providers.gradleProperty("fabric_api_version").get()}")
+
+    modCompileOnly("dev.lambdaurora.lambdynamiclights:lambdynamiclights-api:${providers.gradleProperty("lamb_dynamic_lights_version").get()}")
+    modLocalRuntime("dev.lambdaurora.lambdynamiclights:lambdynamiclights-runtime:${providers.gradleProperty("lamb_dynamic_lights_version").get()}")
 
     modImplementation("maven.modrinth:wathe-extended:${providers.gradleProperty("wathe_extended_version").get()}")
     modApi("dev.doctor4t:wathe:${providers.gradleProperty("wathe_version").get()}")
