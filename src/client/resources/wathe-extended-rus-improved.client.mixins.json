@@ -8,6 +8,7 @@
     "cloudmessage.ClientPlayNetworkHandlerMixin",
     "cloudmessage.PlayerEntityRendererMixin",
     "revolver.RevolverModelLoadingPluginMixin",
+    "revolver.RevolverItemMixin",
     "EntityRendererAccessor"
 	],
 	"injectors": {
