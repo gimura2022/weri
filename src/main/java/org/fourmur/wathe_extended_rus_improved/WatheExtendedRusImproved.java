@@ -3,6 +3,7 @@ package org.fourmur.wathe_extended_rus_improved;
 import org.fourmur.wathe_extended_rus_improved.network.CloudMessageClientboundPayload;
 import org.fourmur.wathe_extended_rus_improved.network.CloudMessageServerReceiver;
 import org.fourmur.wathe_extended_rus_improved.network.CloudMessageServerboundPayload;
+import org.fourmur.wathe_extended_rus_improved.index.BlockEntities;
 import org.fourmur.wathe_extended_rus_improved.index.Blocks;
 import org.fourmur.wathe_extended_rus_improved.index.Items;
 import org.slf4j.Logger;
@@ -23,6 +24,7 @@ public final class WatheExtendedRusImproved implements ModInitializer {
 	public void onInitialize() {
         Items.initialize();
         Blocks.initialize();
+        BlockEntities.initialize();
 
         registerNetwork();
 	}
