@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 public final class Blocks {
     public static void initialize() {}
 
-    public static void register(String key, Block block, boolean registerItem) {
+    public static Block register(String key, Block block, boolean registerItem) {
         Identifier id = WatheExtendedRusImproved.id(key);
 
         if (registerItem) {
@@ -20,6 +20,6 @@ public final class Blocks {
             Registry.register(Registries.ITEM, id, blockItem);
         }
 
-        Registry.register(Registries.BLOCK, id, block);
+        return Registry.register(Registries.BLOCK, id, block);
     }
 }
