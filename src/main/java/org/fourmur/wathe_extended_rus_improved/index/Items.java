@@ -1,6 +1,7 @@
 package org.fourmur.wathe_extended_rus_improved.index;
 
 import org.fourmur.wathe_extended_rus_improved.WatheExtendedRusImproved;
+import org.fourmur.wathe_extended_rus_improved.item.Candle;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -14,7 +15,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public final class Items {
-    public static final Item CANDLE = register("candle", new Item(new Item.Settings()));
+    public static final Item CANDLE = register("candle", new Candle());
 
     public static final RegistryKey<ItemGroup> MOD_CREATIVE_TAB_KEY = RegistryKey.of(
         Registries.ITEM_GROUP.getKey(),
