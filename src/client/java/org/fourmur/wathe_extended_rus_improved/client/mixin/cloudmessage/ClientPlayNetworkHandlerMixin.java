@@ -36,7 +36,7 @@ public final class ClientPlayNetworkHandlerMixin {
 	public void sendChatMessage(String content) {
         MinecraftClient client = MinecraftClient.getInstance();
 
-        if (client.player.isCreative()) {
+        if (!client.interactionManager.getCurrentGameMode().isSurvivalLike()) {
             Instant instant = Instant.now();
             long l = SecureRandomUtil.nextLong();
             LastSeenMessages lastSeenMessages = this.lastSeenMessagesCollector.collect();
