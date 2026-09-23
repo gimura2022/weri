@@ -7,7 +7,7 @@
     "cloudmessage.ChatScreenMixin",
     "cloudmessage.ClientPlayNetworkHandlerMixin",
     "cloudmessage.PlayerEntityRendererMixin",
-    "revolver.WatheRevolverDisableSkinsMixin",
+    "revolver.RevolverModelLoadingPluginMixin",
     "EntityRendererAccessor"
 	],
 	"injectors": {
