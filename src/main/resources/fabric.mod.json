@@ -5,10 +5,6 @@
 	"name": "Wathe Extended Rus Improved",
 	"description": "",
 	"authors": ["_g1mura_", "I_MISOO", "Shiorin_rin", "MusakaMush"],
-	"contact": {
-		"homepage": "https://example.com",
-		"sources": "https://example.com"
-	},
 	"license": "0BSD",
 	"environment": "*",
 	"entrypoints": {
