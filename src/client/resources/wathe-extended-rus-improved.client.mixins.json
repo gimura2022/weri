@@ -9,7 +9,8 @@
     "cloudmessage.PlayerEntityRendererMixin",
     "revolver.RevolverModelLoadingPluginMixin",
     "revolver.RevolverItemMixin",
-    "EntityRendererAccessor"
+    "EntityRendererAccessor",
+    "SplashOverlayMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
