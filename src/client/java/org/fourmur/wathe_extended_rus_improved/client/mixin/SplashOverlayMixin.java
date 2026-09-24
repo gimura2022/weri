@@ -20,13 +20,16 @@ public final class SplashOverlayMixin {
     private static final int TEXTURE_SIZE = 100;
 
     @Unique
-    private static final int ANIMATION_SPEED = 5;
+    private static final int ANIMATION_SPEED = 4;
 
     @Unique
     private static final int ANIMATION_FRAMES = 10;
 
     @Unique
     private float time;
+
+    @Unique
+    private int timeInt;
 
     @Unique
     private int animationTime;
@@ -40,8 +43,10 @@ public final class SplashOverlayMixin {
     ) {
         time += delta;
 
-        if (((int) time) % ANIMATION_SPEED == 0)
+        if (timeInt != (int) time && ((int) time) % ANIMATION_SPEED == 0) {
             animationTime++;
+            timeInt = (int) time;
+        }
 
         if (animationTime == ANIMATION_FRAMES)
             animationTime = 0;
