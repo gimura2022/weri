@@ -16,6 +16,18 @@ public final class SplashOverlayMixin {
     @Unique
 	private static final Identifier TRAIN = WatheExtendedRusImproved.id("textures/gui/train.png");
 
+    @Unique
+    private static final int TEXTURE_SIZE = 100;
+
+    @Unique
+    private static final int ANIMATION_SPEED = 4;
+
+    @Unique
+    private float time;
+
+    @Unique
+    private boolean animation;
+
     @Inject(method = "render", at = @At(value = "TAIL", target = "drawTexture"))
 	public void render(
         DrawContext context,
@@ -23,13 +35,18 @@ public final class SplashOverlayMixin {
         float delta,
         CallbackInfo info
     ) {
+        time += delta;
+
+        if (((int) time) % ANIMATION_SPEED == 0)
+            animation = !animation;
+
         context.drawTexture(
             TRAIN,
-            context.getScaledWindowWidth() - 100,
-            context.getScaledWindowHeight() - 100,
+            context.getScaledWindowWidth() - TEXTURE_SIZE,
+            context.getScaledWindowHeight() - TEXTURE_SIZE + (animation ? 1 : 0),
             1.0f, 1.0f,
-            100, 100,
-            100, 100
+            TEXTURE_SIZE, TEXTURE_SIZE,
+            TEXTURE_SIZE, TEXTURE_SIZE
         );
     }
 }
