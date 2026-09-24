@@ -34,7 +34,7 @@ public final class Items {
         });
     }
 
-    public static Item register(String key, Item item) {
+    private static Item register(String key, Item item) {
         Identifier id = WatheExtendedRusImproved.id(key);
         return Registry.register(Registries.ITEM, id, item);
     }
