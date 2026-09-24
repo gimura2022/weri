@@ -1,6 +1,5 @@
 plugins {
 	id("net.fabricmc.fabric-loom-remap")
-    id("dev.javafmt.gradle")
 	`maven-publish`
 }
 

@@ -10,7 +10,6 @@ pluginManagement {
 
 	plugins {
 		id("net.fabricmc.fabric-loom-remap") version providers.gradleProperty("loom_version")
-        id("dev.javafmt.gradle") version providers.gradleProperty("javafmt_version")
 	}
 }
 
