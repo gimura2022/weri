@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
+import org.fourmur.wathe_extended_rus_improved.WatheExtendedRusImproved;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -27,7 +28,7 @@ import net.minecraft.util.Identifier;
 @Mixin(SplashOverlay.class)
 public final class SplashOverlayMixin {
     @Unique
-	private static final Identifier LOGO = Identifier.ofVanilla("textures/gui/title/minecraft.png");
+	private static final Identifier TRAIN = WatheExtendedRusImproved.id("textures/gui/train.png");
 
     @Inject(method = "render", at = @At("TAIL"))
 	public void render(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo info) {
@@ -37,7 +38,16 @@ public final class SplashOverlayMixin {
 		RenderSystem.blendFunc(770, 1);
 
 		context.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
-        context.drawTexture(LOGO, 0, 0, 1.0f, 1.0f, 100, 100, 100, 100);
+
+        context.drawTexture(
+            TRAIN,
+            context.getScaledWindowWidth() - 100,
+            context.getScaledWindowHeight() - 100,
+            1.0f, 1.0f,
+            100, 100,
+            100, 100
+        );
+
 		context.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
 
 		RenderSystem.defaultBlendFunc();
