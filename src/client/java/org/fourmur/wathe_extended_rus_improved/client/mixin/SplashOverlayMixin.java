@@ -20,13 +20,16 @@ public final class SplashOverlayMixin {
     private static final int TEXTURE_SIZE = 100;
 
     @Unique
-    private static final int ANIMATION_SPEED = 4;
+    private static final int ANIMATION_SPEED = 5;
+
+    @Unique
+    private static final int ANIMATION_FRAMES = 10;
 
     @Unique
     private float time;
 
     @Unique
-    private boolean animation;
+    private int animationTime;
 
     @Inject(method = "render", at = @At(value = "TAIL", target = "drawTexture"))
 	public void render(
@@ -38,15 +41,18 @@ public final class SplashOverlayMixin {
         time += delta;
 
         if (((int) time) % ANIMATION_SPEED == 0)
-            animation = !animation;
+            animationTime++;
+
+        if (animationTime == ANIMATION_FRAMES)
+            animationTime = 0;
 
         context.drawTexture(
             TRAIN,
             context.getScaledWindowWidth() - TEXTURE_SIZE,
-            context.getScaledWindowHeight() - TEXTURE_SIZE + (animation ? 1 : 0),
-            1.0f, 1.0f,
+            context.getScaledWindowHeight() - TEXTURE_SIZE,
+            0.0f, TEXTURE_SIZE * animationTime,
             TEXTURE_SIZE, TEXTURE_SIZE,
-            TEXTURE_SIZE, TEXTURE_SIZE
+            TEXTURE_SIZE, TEXTURE_SIZE * ANIMATION_FRAMES
         );
     }
 }
