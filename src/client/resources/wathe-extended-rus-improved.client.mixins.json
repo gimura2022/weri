@@ -10,7 +10,8 @@
     "revolver.RevolverModelLoadingPluginMixin",
     "revolver.RevolverItemMixin",
     "EntityRendererAccessor",
-    "ScreenAccessor"
+    "ScreenAccessor",
+    "ClientCommonNetworkHandlerAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1
