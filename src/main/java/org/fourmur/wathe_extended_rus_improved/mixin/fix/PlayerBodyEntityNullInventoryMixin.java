@@ -9,7 +9,7 @@ import dev.doctor4t.wathe.entity.PlayerBodyEntity;
 import net.minecraft.item.ItemStack;
 
 @Mixin(PlayerBodyEntity.class)
-public final class WathePlayerBodyDynamicLightsCompatMixin {
+public final class PlayerBodyEntityNullInventoryMixin {
     @Overwrite
     public Iterable<ItemStack> getArmorItems() {
         return Collections.emptyList();

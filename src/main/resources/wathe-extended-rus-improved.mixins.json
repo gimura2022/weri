@@ -3,8 +3,8 @@
 	"package": "org.fourmur.wathe_extended_rus_improved.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-    "WatheDisableSupporterCheckMixin",
-    "fix.WathePlayerBodyDynamicLightsCompatMixin"
+    "fix.PlayerBodyEntityNullInventoryMixin",
+    "WatheDisableSupporterCheckMixin"
   ],
 	"injectors": {
 		"defaultRequire": 1
