@@ -2,20 +2,16 @@ package org.fourmur.wathe_extended_rus_improved.block.entity;
 
 import java.util.UUID;
 
-import org.fourmur.wathe_extended_rus_improved.WatheExtendedRusImproved;
 import org.fourmur.wathe_extended_rus_improved.index.BlockEntities;
-
-import com.mojang.authlib.GameProfile;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper.WrapperLookup;
 import net.minecraft.util.math.BlockPos;
 
 public final class StatueBlockEntity extends BlockEntity {
-    private PlayerEntity playerEntity;
+    private UUID profileId = UUID.fromString("6430ff8e-977e-4137-bbb9-b2733b32c6a4");
 
 	public StatueBlockEntity(BlockPos pos, BlockState state) {
 		super(BlockEntities.STATUE, pos, state);
@@ -23,7 +19,7 @@ public final class StatueBlockEntity extends BlockEntity {
 
 	@Override
 	protected void writeNbt(NbtCompound nbt, WrapperLookup registryLookup) {
-        nbt.putUuid("profile", playerEntity.getUuid());
+        nbt.putUuid("profile", profileId);
 
 		super.writeNbt(nbt, registryLookup);
 	}
@@ -32,26 +28,10 @@ public final class StatueBlockEntity extends BlockEntity {
 	protected void readNbt(NbtCompound nbt, WrapperLookup registryLookup) {
 		super.readNbt(nbt, registryLookup);
 
-        playerEntity = getPlayerEntity(nbt.getUuid("profile"));
-
-        WatheExtendedRusImproved.LOGGER.debug(playerEntity.toString());
+        profileId = nbt.getUuid("profile");
 	}
 
-	public PlayerEntity getPlayerEntity() {
-		return playerEntity;
-	}
-
-    private PlayerEntity getPlayerEntity(UUID profile) {
-        return new PlayerEntity(getWorld(), getPos(), 0.0f, new GameProfile(profile, "<statue profile>")) {
-			@Override
-			public boolean isSpectator() {
-                return false;
-			}
-
-			@Override
-			public boolean isCreative() {
-                return false;
-			}
-        };
+    public UUID getProfileId() {
+        return profileId;
     }
 }
