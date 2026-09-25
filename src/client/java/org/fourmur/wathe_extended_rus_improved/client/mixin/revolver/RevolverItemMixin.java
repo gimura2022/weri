@@ -20,6 +20,6 @@ public final class RevolverItemMixin {
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void clinit(CallbackInfo info) {
-        DEFAULT_FLASH_OFFSET = new Vec3d(-0.15f, 0.275f, -0.77f);
+        DEFAULT_FLASH_OFFSET = new Vec3d(-0.05f, 0.24f, -0.9f);
     }
 }
