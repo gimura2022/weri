@@ -1,6 +1,6 @@
 package org.fourmur.wathe_extended_rus_improved.client.mixin.cloudmessage;
 
-import org.fourmur.wathe_extended_rus_improved.client.mixin.ScreenAccessor;
+import org.fourmur.wathe_extended_rus_improved.client.mixin.accessor.ScreenAccessor;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Unique;

@@ -9,9 +9,9 @@
     "cloudmessage.PlayerEntityRendererMixin",
     "revolver.RevolverModelLoadingPluginMixin",
     "revolver.RevolverItemMixin",
-    "EntityRendererAccessor",
-    "ScreenAccessor",
-    "ClientCommonNetworkHandlerAccessor"
+    "accessor.EntityRendererAccessor",
+    "accessor.ScreenAccessor",
+    "accessor.ClientCommonNetworkHandlerAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

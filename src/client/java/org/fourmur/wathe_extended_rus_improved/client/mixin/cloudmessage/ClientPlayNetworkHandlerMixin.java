@@ -2,7 +2,7 @@ package org.fourmur.wathe_extended_rus_improved.client.mixin.cloudmessage;
 
 import java.time.Instant;
 
-import org.fourmur.wathe_extended_rus_improved.client.mixin.ClientCommonNetworkHandlerAccessor;
+import org.fourmur.wathe_extended_rus_improved.client.mixin.accessor.ClientCommonNetworkHandlerAccessor;
 import org.fourmur.wathe_extended_rus_improved.network.CloudMessageServerboundPayload;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
