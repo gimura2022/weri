@@ -1,5 +1,6 @@
 package org.fourmur.wathe_extended_rus_improved.client.mixin.cloudmessage;
 
+import org.fourmur.wathe_extended_rus_improved.client.mixin.ScreenAccessor;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Unique;
@@ -15,9 +16,12 @@ public final class ChatScreenMixin {
     @Unique
     private final ChatScreen chatScreen = (ChatScreen) (Object) this;
 
+    @Unique
+    private final ScreenAccessor screenAccessor = (ScreenAccessor) chatScreen;
+
     @Overwrite
 	public void sendMessage(String chatText, boolean addToHistory) {
-        MinecraftClient client = MinecraftClient.getInstance();
+        MinecraftClient client = screenAccessor.wathe_extended_rus_improved$getClient();
 		chatText = chatScreen.normalize(chatText);
 
 		if (!chatText.isEmpty()) {
