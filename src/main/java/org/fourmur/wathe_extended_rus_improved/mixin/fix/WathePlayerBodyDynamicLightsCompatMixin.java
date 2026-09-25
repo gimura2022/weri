@@ -1,4 +1,4 @@
-package org.fourmur.wathe_extended_rus_improved.mixin;
+package org.fourmur.wathe_extended_rus_improved.mixin.fix;
 
 import java.util.Collections;
 
