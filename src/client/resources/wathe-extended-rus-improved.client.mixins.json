@@ -9,7 +9,6 @@
     "cloudmessage.PlayerEntityRendererMixin",
     "revolver.RevolverModelLoadingPluginMixin",
     "revolver.RevolverItemMixin",
-    "berserk.PlayerEntityRendererMixin",
     "EntityRendererAccessor",
     "ScreenAccessor",
     "ClientCommonNetworkHandlerAccessor"
