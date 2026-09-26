@@ -14,7 +14,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public final class Items {
+public final class WeriItems {
     public static final Item CANDLE = register("candle", new CandleItem());
 
     public static final RegistryKey<ItemGroup> MOD_CREATIVE_TAB_KEY = RegistryKey.of(
