@@ -4,7 +4,7 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
     "cloudmessage.AbstractClientPlayerEntityCloudMessageQueueHolderMixin",
-    "cloudmessage.ChatScreenMixin",
+    "cloudmessage.ChatScreenCloudMessageSendMixin",
     "cloudmessage.ClientPlayNetworkHandlerMixin",
     "cloudmessage.PlayerEntityRendererMixin",
     "revolver.RevolverModelLoadingPluginMixin",
