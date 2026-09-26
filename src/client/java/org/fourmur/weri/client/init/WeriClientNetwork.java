@@ -1,4 +1,4 @@
-package org.fourmur.weri.client.index;
+package org.fourmur.weri.client.init;
 
 import java.util.function.BiFunction;
 

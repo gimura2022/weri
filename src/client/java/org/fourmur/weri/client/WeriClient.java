@@ -1,7 +1,7 @@
 package org.fourmur.weri.client;
 
 import org.fourmur.weri.Weri;
-import org.fourmur.weri.client.index.WeriClientNetwork;
+import org.fourmur.weri.client.init.WeriClientNetwork;
 
 import net.fabricmc.api.ClientModInitializer;
 

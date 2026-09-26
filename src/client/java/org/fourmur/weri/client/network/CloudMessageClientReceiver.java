@@ -3,7 +3,7 @@ package org.fourmur.weri.client.network;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 
-import org.fourmur.weri.client.index.WeriClientNetwork;
+import org.fourmur.weri.client.init.WeriClientNetwork;
 import org.fourmur.weri.client.mixininterface.CloudMessageQueueHolder;
 import org.fourmur.weri.network.CloudMessageClientboundPayload;
 import org.fourmur.weri.Weri;
