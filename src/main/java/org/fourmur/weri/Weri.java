@@ -18,6 +18,8 @@ public final class Weri implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        LOGGER.info("WERI initialized");
+
         WeriItems.initialize();
         WeriNetwork.initialize();
 	}
