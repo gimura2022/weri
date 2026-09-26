@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Uuids;
 
 public final record CloudMessageClientboundPayload(String message, UUID player) implements CustomPayload {
-    public static final Identifier PACKET_ID = Weri.id("cloud_message");
+    public static final Identifier PACKET_ID = Weri.id("cloud_message_clientbound");
     public static final CustomPayload.Id<CloudMessageClientboundPayload> ID = new CustomPayload.Id<>(PACKET_ID);
     public static final PacketCodec<RegistryByteBuf, CloudMessageClientboundPayload> PACKET_CODEC = PacketCodec.tuple(
         PacketCodecs.STRING, CloudMessageClientboundPayload::message,
