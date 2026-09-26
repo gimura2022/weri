@@ -3,7 +3,7 @@ package org.fourmur.weri;
 import org.fourmur.weri.network.CloudMessageClientboundPayload;
 import org.fourmur.weri.network.CloudMessageServerReceiver;
 import org.fourmur.weri.network.CloudMessageServerboundPayload;
-import org.fourmur.weri.index.Items;
+import org.fourmur.weri.init.Items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

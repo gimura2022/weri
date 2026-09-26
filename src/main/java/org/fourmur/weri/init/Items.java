@@ -1,4 +1,4 @@
-package org.fourmur.weri.index;
+package org.fourmur.weri.init;
 
 import org.fourmur.weri.Weri;
 import org.fourmur.weri.item.CandleItem;
