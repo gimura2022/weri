@@ -2,8 +2,8 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "wathe-extended-rus-improved:item/tape",
-		"particle": "wathe-extended-rus-improved:item/tape"
+		"0": "weri:item/tape",
+		"particle": "weri:item/tape"
 	},
 	"elements": [
 		{

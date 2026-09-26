@@ -3,10 +3,10 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [8, 8],
 	"textures": {
-		"0": "wathe-extended-rus-improved:item/lighter",
-		"2": "wathe-extended-rus-improved:item/fire",
-		"4": "wathe-extended-rus-improved:item/lighter3",
-		"particle": "wathe-extended-rus-improved:item/lighter"
+		"0": "weri:item/lighter",
+		"2": "weri:item/fire",
+		"4": "weri:item/lighter3",
+		"particle": "weri:item/lighter"
 	},
 	"elements": [
 		{

@@ -23,7 +23,7 @@ public final class Items {
     );
     public static final ItemGroup MOD_CREATIVE_TAB = FabricItemGroup.builder()
         .icon(() -> new ItemStack(CANDLE))
-        .displayName(Text.translatable("itemGroup.wathe-extended-rus-improved.items"))
+        .displayName(Text.translatable("itemGroup.weri.items"))
         .build();
 
     public static void initialize() {

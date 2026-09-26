@@ -75,7 +75,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		register("wathe-extended-rus-improved") {
+		register("weri") {
 			sourceSet(sourceSets.main.get())
 			sourceSet(sourceSets.getByName("client"))
 		}

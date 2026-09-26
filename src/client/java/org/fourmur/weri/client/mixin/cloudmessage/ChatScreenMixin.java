@@ -33,7 +33,7 @@ public final class ChatScreenMixin {
 				client.player.networkHandler.sendChatCommand(chatText.substring(1));
 			} else {
                 if (chatText.length() > MAX_MESSAGE_LENGTH && !client.player.isCreative()) {
-                    client.player.sendMessage(Text.translatable("chat.wathe-extended-rus-improved.message_too_long"));
+                    client.player.sendMessage(Text.translatable("chat.weri.message_too_long"));
                     return;
                 }
 

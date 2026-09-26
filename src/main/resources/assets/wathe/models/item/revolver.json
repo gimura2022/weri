@@ -2,8 +2,8 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "wathe-extended-rus-improved:item/revolver",
-		"particle": "wathe-extended-rus-improved:item/revolver"
+		"1": "weri:item/revolver",
+		"particle": "weri:item/revolver"
 	},
 	"elements": [
 		{

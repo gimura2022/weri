@@ -13,4 +13,4 @@ pluginManagement {
 	}
 }
 
-rootProject.name = "wathe-extended-rus-improved"
+rootProject.name = "weri"

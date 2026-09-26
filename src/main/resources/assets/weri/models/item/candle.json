@@ -2,9 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "wathe-extended-rus-improved:item/candle",
-		"2": "wathe-extended-rus-improved:item/fire",
-		"particle": "wathe-extended-rus-improved:item/candle"
+		"1": "weri:item/candle",
+		"2": "weri:item/fire",
+		"particle": "weri:item/candle"
 	},
 	"elements": [
 		{
