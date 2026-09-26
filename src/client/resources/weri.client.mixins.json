@@ -8,7 +8,7 @@
     "cloudmessage.ClientPlayNetworkHandlerCloudMessageSendMixin",
     "cloudmessage.PlayerEntityRendererCloudMessageMixin",
     "revolver.RevolverModelLoadingPluginMixin",
-    "revolver.RevolverItemMixin",
+    "revolver.RevolverItemFlashOffsetMixin",
     "accessor.EntityRendererAccessor",
     "accessor.ScreenAccessor",
     "accessor.ClientCommonNetworkHandlerAccessor"

@@ -7,7 +7,7 @@ import dev.doctor4t.wathe.item.RevolverItem;
 import net.minecraft.util.math.Vec3d;
 
 @Mixin(RevolverItem.class)
-public final class RevolverItemMixin {
+public final class RevolverItemFlashOffsetMixin {
     @Shadow
     private static Vec3d DEFAULT_FLASH_OFFSET = new Vec3d(-0.05f, 0.24f, -0.9f);
 }
