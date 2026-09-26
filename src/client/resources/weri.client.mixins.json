@@ -3,15 +3,15 @@
 	"package": "org.fourmur.weri.client.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+    "accessor.EntityRendererAccessor",
+    "accessor.ScreenAccessor",
+    "accessor.ClientCommonNetworkHandlerAccessor",
     "cloudmessage.AbstractClientPlayerEntityCloudMessageQueueHolderMixin",
     "cloudmessage.ChatScreenCloudMessageSendMixin",
     "cloudmessage.ClientPlayNetworkHandlerCloudMessageSendMixin",
     "cloudmessage.PlayerEntityRendererCloudMessageMixin",
-    "revolver.RevolverModelLoadingPluginDisableSkinsMixin",
     "revolver.RevolverItemFlashOffsetMixin",
-    "accessor.EntityRendererAccessor",
-    "accessor.ScreenAccessor",
-    "accessor.ClientCommonNetworkHandlerAccessor"
+    "revolver.RevolverModelLoadingPluginDisableSkinsMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
