@@ -1,7 +1,7 @@
 package org.fourmur.weri.index;
 
 import org.fourmur.weri.Weri;
-import org.fourmur.weri.item.Candle;
+import org.fourmur.weri.item.CandleItem;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -15,7 +15,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public final class Items {
-    public static final Item CANDLE = register("candle", new Candle());
+    public static final Item CANDLE = register("candle", new CandleItem());
 
     public static final RegistryKey<ItemGroup> MOD_CREATIVE_TAB_KEY = RegistryKey.of(
         Registries.ITEM_GROUP.getKey(),
