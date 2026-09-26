@@ -6,18 +6,12 @@ import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.server.network.ServerPlayerEntity;
 
-public final class CloudMessageServerReceiver implements Runnable {
+public final record CloudMessageServerReceiver(CloudMessageServerboundPayload payload,
+        ServerPlayNetworking.Context context) implements Runnable {
     public static final double SENDING_RADIUS = 10.0;
+
     public static final WeriNetwork.ServerReceiverInfo<CloudMessageServerboundPayload, CloudMessageServerReceiver> RECEIVER_INFO =
         new WeriNetwork.ServerReceiverInfo<>(CloudMessageServerboundPayload.PAYLOAD_INFO, CloudMessageServerReceiver::new);
-
-    private final CloudMessageServerboundPayload payload;
-    private final ServerPlayNetworking.Context context;
-
-    public CloudMessageServerReceiver(CloudMessageServerboundPayload payload, ServerPlayNetworking.Context context) {
-        this.payload = payload;
-        this.context = context;
-    }
 
 	@Override
 	public void run() {
