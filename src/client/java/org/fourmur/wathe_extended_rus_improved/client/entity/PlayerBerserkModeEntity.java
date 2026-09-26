@@ -1,4 +1,4 @@
-package org.fourmur.wathe_extended_rus_improved.entity;
+package org.fourmur.wathe_extended_rus_improved.client.entity;
 
 import net.minecraft.entity.EntityType;
 import software.bernie.geckolib.animatable.GeoReplacedEntity;
