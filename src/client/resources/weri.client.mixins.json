@@ -3,7 +3,7 @@
 	"package": "org.fourmur.weri.client.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-    "cloudmessage.AbstractClientPlayerEntityMixin",
+    "cloudmessage.AbstractClientPlayerEntityCloudMessageQueueHolderMixin",
     "cloudmessage.ChatScreenMixin",
     "cloudmessage.ClientPlayNetworkHandlerMixin",
     "cloudmessage.PlayerEntityRendererMixin",
