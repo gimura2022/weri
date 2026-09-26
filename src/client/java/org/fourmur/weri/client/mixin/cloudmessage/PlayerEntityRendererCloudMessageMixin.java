@@ -1,5 +1,7 @@
 package org.fourmur.weri.client.mixin.cloudmessage;
 
+import org.fourmur.weri.client.cloudmessage.CloudMessageQueue;
+import org.fourmur.weri.client.cloudmessage.CloudMessageRenderer;
 import org.fourmur.weri.client.mixininterface.CloudMessageQueueHolder;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -15,7 +17,7 @@ import net.minecraft.client.util.math.MatrixStack;
 @Mixin(PlayerEntityRenderer.class)
 public final class PlayerEntityRendererCloudMessageMixin {
     @Unique
-    private final PlayerEntityRenderer renderer = (PlayerEntityRenderer) (Object) this;
+    private final CloudMessageRenderer cloudMessageRenderer = new CloudMessageRenderer();
 
     @Inject(method = "render", at = @At(value = "HEAD"))
     private void render(
@@ -27,8 +29,11 @@ public final class PlayerEntityRendererCloudMessageMixin {
         int light,
         CallbackInfo info
 	) {
-        ((CloudMessageQueueHolder) entity).weri$getQueue().render(
-            renderer,
+        CloudMessageQueue queue = ((CloudMessageQueueHolder) entity).weri$getQueue();
+
+        queue.update(tickDelta);
+        cloudMessageRenderer.render(
+            (PlayerEntityRenderer) (Object) this,
             entity,
             tickDelta,
             matrices,

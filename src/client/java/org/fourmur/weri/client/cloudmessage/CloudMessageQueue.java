@@ -3,27 +3,19 @@ package org.fourmur.weri.client.cloudmessage;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.fourmur.weri.client.mixin.accessor.EntityRendererAccessor;
-
-import net.minecraft.client.font.TextRenderer;
-import net.minecraft.client.network.AbstractClientPlayerEntity;
-import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.entity.PlayerEntityRenderer;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.EntityAttachmentType;
-import net.minecraft.util.Colors;
-import net.minecraft.util.math.Vec3d;
-
 public final class CloudMessageQueue {
     public static final int MAX_ELEMENTS = 3;
-
     public static final double MAX_MESSAGE_LIFETIME = 80;
-    public static final double MESSAGE_IN_TIME = 2.0;
-    public static final double MESSAGE_OUT_TIME = 2.0;
 
-    public static final double RENDER_Y_OFFSET = 0.2;
-    public static final double RENDER_Y_STEP = 0.2;
-    public static final float RENDER_TEXT_SCALE = 0.016f;
+    public final class Message {
+        public final String message;
+        public double age;
+
+        public Message(String message, double age) {
+            this.message = message;
+            this.age = age;
+        }
+    }
 
     private final List<Message> messages = new ArrayList<>();
 
@@ -34,79 +26,16 @@ public final class CloudMessageQueue {
             messages.remove(MAX_ELEMENTS);
     }
 
-    public void render(
-        PlayerEntityRenderer playerRenderer,
-		AbstractClientPlayerEntity entity,
-        float tickDelta,
-        MatrixStack matrices,
-        VertexConsumerProvider vertexConsumers,
-        int light
-    ) {
+    public void update(float tickDelta) {
         for (Message message : messages) {
             message.age += tickDelta;
         }
  
         if (messages.size() != 0 && messages.getLast().age > MAX_MESSAGE_LIFETIME)
             messages.removeLast();
-
-        for (Message message : messages) {
-            renderMessage(playerRenderer, entity, tickDelta, matrices, vertexConsumers, light, message);
-        }
     }
 
-    private void renderMessage(
-        PlayerEntityRenderer playerRenderer,
-		AbstractClientPlayerEntity entity,
-        float tickDelta,
-        MatrixStack matrices,
-        VertexConsumerProvider vertexConsumers,
-        int light,
-        Message message
-    ) {
-		Vec3d pos = entity.getAttachments().getPointNullable(EntityAttachmentType.NAME_TAG, 0, entity.getYaw(tickDelta));
-
-        if (pos == null)
-            return;
-
-        double offset = messages.indexOf(message) * RENDER_Y_STEP;
-        float scale = RENDER_TEXT_SCALE;
-
-        if (message.age <= MESSAGE_IN_TIME)
-            scale *= message.age / MESSAGE_IN_TIME;
-
-        if ((MAX_MESSAGE_LIFETIME - message.age) <= MESSAGE_OUT_TIME)
-            scale *= (MAX_MESSAGE_LIFETIME - message.age) / MESSAGE_OUT_TIME;
-
-        matrices.push();
-        matrices.translate(pos.x, pos.y + 0.5 + RENDER_Y_OFFSET + offset, pos.z);
-        matrices.multiply(((EntityRendererAccessor) playerRenderer).weri$getDispatcher().getRotation());
-		matrices.scale(scale, -scale, scale);
-
-        TextRenderer textRenderer = playerRenderer.getTextRenderer();
-
-        textRenderer.draw(
-            message.message,
-            -textRenderer.getWidth(message.message) / 2,
-            0,
-            Colors.WHITE,
-            true,
-            matrices.peek().getPositionMatrix(),
-            vertexConsumers,
-            TextRenderer.TextLayerType.NORMAL,
-            0,
-            7340256
-        );
-
-        matrices.pop();
-    }
-
-    private final class Message {
-        public final String message;
-        public double age;
-
-        public Message(String message, double age) {
-            this.message = message;
-            this.age = age;
-        }
-    }
+	public List<Message> getMessages() {
+		return messages;
+	}
 }
