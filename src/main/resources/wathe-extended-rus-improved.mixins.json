@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "org.fourmur.wathe_extended_rus_improved.mixin",
+	"package": "org.fourmur.weri.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
     "fix.PlayerBodyEntityNullInventoryMixin",

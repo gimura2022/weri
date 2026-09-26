@@ -8,8 +8,8 @@
 	"license": "0BSD",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["org.fourmur.wathe_extended_rus_improved.WatheExtendedRusImproved"],
-    "client": ["org.fourmur.wathe_extended_rus_improved.client.WatheExtendedRusImprovedClient"]
+		"main": ["org.fourmur.weri.WatheExtendedRusImproved"],
+    "client": ["org.fourmur.weri.client.WatheExtendedRusImprovedClient"]
 	},
 	"mixins": [
 		"wathe-extended-rus-improved.mixins.json",

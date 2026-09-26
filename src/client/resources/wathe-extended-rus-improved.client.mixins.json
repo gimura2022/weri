@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "org.fourmur.wathe_extended_rus_improved.client.mixin",
+	"package": "org.fourmur.weri.client.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
     "cloudmessage.AbstractClientPlayerEntityMixin",
