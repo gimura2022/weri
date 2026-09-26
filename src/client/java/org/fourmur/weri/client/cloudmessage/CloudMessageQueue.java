@@ -1,4 +1,4 @@
-package org.fourmur.weri.client;
+package org.fourmur.weri.client.cloudmessage;
 
 import java.util.ArrayList;
 import java.util.List;

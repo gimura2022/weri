@@ -1,6 +1,6 @@
 package org.fourmur.weri.client.mixin.cloudmessage;
 
-import org.fourmur.weri.client.CloudMessageQueue;
+import org.fourmur.weri.client.cloudmessage.CloudMessageQueue;
 import org.fourmur.weri.client.mixininterface.CloudMessageQueueHolder;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
