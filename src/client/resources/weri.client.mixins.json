@@ -7,7 +7,7 @@
     "cloudmessage.ChatScreenCloudMessageSendMixin",
     "cloudmessage.ClientPlayNetworkHandlerCloudMessageSendMixin",
     "cloudmessage.PlayerEntityRendererCloudMessageMixin",
-    "revolver.RevolverModelLoadingPluginMixin",
+    "revolver.RevolverModelLoadingPluginDisableSkinsMixin",
     "revolver.RevolverItemFlashOffsetMixin",
     "accessor.EntityRendererAccessor",
     "accessor.ScreenAccessor",
