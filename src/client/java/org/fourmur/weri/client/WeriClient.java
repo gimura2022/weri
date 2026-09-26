@@ -4,7 +4,7 @@ import org.fourmur.weri.client.network.CloudMessageClientReceiver;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public final class WatheExtendedRusImprovedClient implements ClientModInitializer {
+public final class WeriClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
         CloudMessageClientReceiver.register();

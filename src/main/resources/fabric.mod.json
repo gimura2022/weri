@@ -9,7 +9,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": ["org.fourmur.weri.WatheExtendedRusImproved"],
-    "client": ["org.fourmur.weri.client.WatheExtendedRusImprovedClient"]
+    "client": ["org.fourmur.weri.client.WeriClient"]
 	},
 	"mixins": [
 		"weri.mixins.json",
