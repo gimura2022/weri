@@ -1,6 +1,6 @@
 package org.fourmur.weri.index;
 
-import org.fourmur.weri.WatheExtendedRusImproved;
+import org.fourmur.weri.Weri;
 import org.fourmur.weri.item.Candle;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -19,7 +19,7 @@ public final class Items {
 
     public static final RegistryKey<ItemGroup> MOD_CREATIVE_TAB_KEY = RegistryKey.of(
         Registries.ITEM_GROUP.getKey(),
-        WatheExtendedRusImproved.id("items")
+        Weri.id("items")
     );
     public static final ItemGroup MOD_CREATIVE_TAB = FabricItemGroup.builder()
         .icon(() -> new ItemStack(CANDLE))
@@ -35,7 +35,7 @@ public final class Items {
     }
 
     private static Item register(String key, Item item) {
-        Identifier id = WatheExtendedRusImproved.id(key);
+        Identifier id = Weri.id(key);
         return Registry.register(Registries.ITEM, id, item);
     }
 }
