@@ -8,17 +8,10 @@ import org.fourmur.weri.client.mixininterface.CloudMessageQueueHolder;
 import org.fourmur.weri.network.CloudMessageClientboundPayload;
 import org.fourmur.weri.Weri;
 
-public final class CloudMessageClientReceiver implements Runnable {
+public final record CloudMessageClientReceiver(CloudMessageClientboundPayload payload,
+        ClientPlayNetworking.Context context) implements Runnable {
     public static final WeriClientNetwork.ClientReceiverInfo<CloudMessageClientboundPayload, CloudMessageClientReceiver> RECEIVER_INFO =
         new WeriClientNetwork.ClientReceiverInfo<>(CloudMessageClientboundPayload.PAYLOAD_INFO, CloudMessageClientReceiver::new);
-
-    private final CloudMessageClientboundPayload payload;
-    private final ClientPlayNetworking.Context context;
-
-    public CloudMessageClientReceiver(CloudMessageClientboundPayload payload, ClientPlayNetworking.Context context) {
-        this.payload = payload;
-        this.context = context;
-    }
 
 	@Override
 	public void run() {
