@@ -3,7 +3,7 @@
 	"package": "org.fourmur.weri.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-    "fix.PlayerBodyEntityNullInventoryMixin",
+    "fix.PlayerBodyEntityNullInventoryFixMixin",
     "WatheDisableSupporterCheckMixin"
   ],
 	"injectors": {
