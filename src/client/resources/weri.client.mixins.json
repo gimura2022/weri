@@ -5,7 +5,7 @@
 	"mixins": [
     "cloudmessage.AbstractClientPlayerEntityCloudMessageQueueHolderMixin",
     "cloudmessage.ChatScreenCloudMessageSendMixin",
-    "cloudmessage.ClientPlayNetworkHandlerMixin",
+    "cloudmessage.ClientPlayNetworkHandlerCloudMessageSendMixin",
     "cloudmessage.PlayerEntityRendererMixin",
     "revolver.RevolverModelLoadingPluginMixin",
     "revolver.RevolverItemMixin",

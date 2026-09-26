@@ -23,7 +23,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
 @Mixin(ClientPlayNetworkHandler.class)
-public final class ClientPlayNetworkHandlerMixin {
+public final class ClientPlayNetworkHandlerCloudMessageSendMixin {
     @Shadow
 	private LastSeenMessagesCollector lastSeenMessagesCollector;
 
