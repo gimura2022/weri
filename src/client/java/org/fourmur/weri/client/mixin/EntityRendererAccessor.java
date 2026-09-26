@@ -9,5 +9,5 @@ import net.minecraft.client.render.entity.EntityRenderer;
 @Mixin(EntityRenderer.class)
 public interface EntityRendererAccessor {
     @Accessor("dispatcher")
-    EntityRenderDispatcher wathe_extended_rus_improved$getDispatcher();
+    EntityRenderDispatcher weri$getDispatcher();
 }

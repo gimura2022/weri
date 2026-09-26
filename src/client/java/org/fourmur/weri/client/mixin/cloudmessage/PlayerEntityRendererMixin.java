@@ -27,7 +27,7 @@ public final class PlayerEntityRendererMixin {
         int light,
         CallbackInfo info
 	) {
-        ((CloudMessageQueueHolder) entity).wathe_extended_rus_improved$getQueue().render(
+        ((CloudMessageQueueHolder) entity).weri$getQueue().render(
             renderer,
             entity,
             tickDelta,

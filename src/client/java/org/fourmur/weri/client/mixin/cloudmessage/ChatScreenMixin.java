@@ -21,7 +21,7 @@ public final class ChatScreenMixin {
 
     @Overwrite
 	public void sendMessage(String chatText, boolean addToHistory) {
-        MinecraftClient client = screenAccessor.wathe_extended_rus_improved$getClient();
+        MinecraftClient client = screenAccessor.weri$getClient();
 		chatText = chatScreen.normalize(chatText);
 
 		if (!chatText.isEmpty()) {

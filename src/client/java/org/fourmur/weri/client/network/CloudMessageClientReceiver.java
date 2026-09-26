@@ -22,6 +22,6 @@ public final record CloudMessageClientReceiver(CloudMessageClientboundPayload pa
 
         Weri.LOGGER.debug(sender + " was sended " + payload.message());
 
-        ((CloudMessageQueueHolder) sender).wathe_extended_rus_improved$getQueue().queueMessage(payload.message());
+        ((CloudMessageQueueHolder) sender).weri$getQueue().queueMessage(payload.message());
 	}
 }

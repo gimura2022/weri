@@ -39,7 +39,7 @@ public final class ClientPlayNetworkHandlerMixin {
 
     @Overwrite
 	public void sendChatMessage(String content) {
-        MinecraftClient client = networkHandlerAccessor.wathe_extended_rus_improved$getClient();
+        MinecraftClient client = networkHandlerAccessor.weri$getClient();
 
         if (!client.interactionManager.getCurrentGameMode().isSurvivalLike()) {
             Instant instant = Instant.now();

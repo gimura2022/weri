@@ -14,7 +14,7 @@ public final class AbstractClientPlayerEntityMixin implements CloudMessageQueueH
 
     @Unique
 	@Override
-	public CloudMessageQueue wathe_extended_rus_improved$getQueue() {
+	public CloudMessageQueue weri$getQueue() {
         return cloudMessageQueue;
 	}
 }

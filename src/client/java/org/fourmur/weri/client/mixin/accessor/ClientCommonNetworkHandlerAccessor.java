@@ -9,5 +9,5 @@ import net.minecraft.client.network.ClientCommonNetworkHandler;
 @Mixin(ClientCommonNetworkHandler.class)
 public interface ClientCommonNetworkHandlerAccessor {
     @Accessor("client")
-    MinecraftClient wathe_extended_rus_improved$getClient();
+    MinecraftClient weri$getClient();
 }

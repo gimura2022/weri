@@ -79,7 +79,7 @@ public final class CloudMessageQueue {
 
         matrices.push();
         matrices.translate(pos.x, pos.y + 0.5 + RENDER_Y_OFFSET + offset, pos.z);
-        matrices.multiply(((EntityRendererAccessor) playerRenderer).wathe_extended_rus_improved$getDispatcher().getRotation());
+        matrices.multiply(((EntityRendererAccessor) playerRenderer).weri$getDispatcher().getRotation());
 		matrices.scale(scale, -scale, scale);
 
         TextRenderer textRenderer = playerRenderer.getTextRenderer();

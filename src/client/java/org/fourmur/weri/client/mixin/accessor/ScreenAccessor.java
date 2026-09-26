@@ -9,5 +9,5 @@ import net.minecraft.client.gui.screen.Screen;
 @Mixin(Screen.class)
 public interface ScreenAccessor {
     @Accessor("client")
-    MinecraftClient wathe_extended_rus_improved$getClient();
+    MinecraftClient weri$getClient();
 }

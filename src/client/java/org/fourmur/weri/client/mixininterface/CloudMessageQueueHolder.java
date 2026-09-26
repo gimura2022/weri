@@ -5,5 +5,5 @@ import org.spongepowered.asm.mixin.Unique;
 
 public interface CloudMessageQueueHolder {
     @Unique
-    CloudMessageQueue wathe_extended_rus_improved$getQueue();
+    CloudMessageQueue weri$getQueue();
 }
