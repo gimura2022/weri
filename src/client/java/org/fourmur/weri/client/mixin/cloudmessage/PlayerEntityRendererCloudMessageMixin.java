@@ -13,7 +13,7 @@ import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 
 @Mixin(PlayerEntityRenderer.class)
-public final class PlayerEntityRendererMixin {
+public final class PlayerEntityRendererCloudMessageMixin {
     @Unique
     private final PlayerEntityRenderer renderer = (PlayerEntityRenderer) (Object) this;
 

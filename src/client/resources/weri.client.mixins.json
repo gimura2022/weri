@@ -6,7 +6,7 @@
     "cloudmessage.AbstractClientPlayerEntityCloudMessageQueueHolderMixin",
     "cloudmessage.ChatScreenCloudMessageSendMixin",
     "cloudmessage.ClientPlayNetworkHandlerCloudMessageSendMixin",
-    "cloudmessage.PlayerEntityRendererMixin",
+    "cloudmessage.PlayerEntityRendererCloudMessageMixin",
     "revolver.RevolverModelLoadingPluginMixin",
     "revolver.RevolverItemMixin",
     "accessor.EntityRendererAccessor",
