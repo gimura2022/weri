@@ -1,28 +1,23 @@
 package org.fourmur.weri.network;
 
 import org.fourmur.weri.Weri;
+import org.fourmur.weri.init.WeriNetwork;
 
-import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
-import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.network.codec.PacketCodecs;
 import net.minecraft.network.packet.CustomPayload;
-import net.minecraft.util.Identifier;
 
 public final record CloudMessageServerboundPayload(String message) implements CustomPayload {
-    public static final Identifier PACKET_ID = Weri.id("cloud_message_serverbound");
-    public static final CustomPayload.Id<CloudMessageServerboundPayload> ID = new CustomPayload.Id<>(PACKET_ID);
-    public static final PacketCodec<RegistryByteBuf, CloudMessageServerboundPayload> PACKET_CODEC = PacketCodec.tuple(
-        PacketCodecs.STRING, CloudMessageServerboundPayload::message,
-        CloudMessageServerboundPayload::new
+    public static final WeriNetwork.PayloadInfo<CloudMessageServerboundPayload> PAYLOAD_INFO = new WeriNetwork.PayloadInfo<>(
+        new CustomPayload.Id<>(Weri.id("cloud_message_serverbound")),
+        PacketCodec.tuple(
+            PacketCodecs.STRING, CloudMessageServerboundPayload::message,
+            CloudMessageServerboundPayload::new
+        )
     );
-
-    public static void register() {
-        PayloadTypeRegistry.playC2S().register(ID, PACKET_CODEC);
-    }
 
     @Override
     public Id<? extends CustomPayload> getId() {
-        return ID;
+        return PAYLOAD_INFO.id();
     }
 }

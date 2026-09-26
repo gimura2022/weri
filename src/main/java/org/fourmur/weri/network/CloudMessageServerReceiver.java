@@ -1,11 +1,15 @@
 package org.fourmur.weri.network;
 
+import org.fourmur.weri.init.WeriNetwork;
+
 import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.server.network.ServerPlayerEntity;
 
 public final class CloudMessageServerReceiver implements Runnable {
     public static final double SENDING_RADIUS = 10.0;
+    public static final WeriNetwork.ServerReceiverInfo<CloudMessageServerboundPayload, CloudMessageServerReceiver> RECEIVER_INFO =
+        new WeriNetwork.ServerReceiverInfo<>(CloudMessageServerboundPayload.PAYLOAD_INFO, CloudMessageServerReceiver::new);
 
     private final CloudMessageServerboundPayload payload;
     private final ServerPlayNetworking.Context context;
@@ -13,12 +17,6 @@ public final class CloudMessageServerReceiver implements Runnable {
     public CloudMessageServerReceiver(CloudMessageServerboundPayload payload, ServerPlayNetworking.Context context) {
         this.payload = payload;
         this.context = context;
-    }
-
-    public static void register() {
-        ServerPlayNetworking.registerGlobalReceiver(CloudMessageServerboundPayload.ID, (payload, context) -> {
-            context.server().execute(new CloudMessageServerReceiver(payload, context));
-        });
     }
 
 	@Override

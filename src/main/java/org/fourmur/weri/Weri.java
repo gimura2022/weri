@@ -1,9 +1,7 @@
 package org.fourmur.weri;
 
-import org.fourmur.weri.network.CloudMessageClientboundPayload;
-import org.fourmur.weri.network.CloudMessageServerReceiver;
-import org.fourmur.weri.network.CloudMessageServerboundPayload;
 import org.fourmur.weri.init.WeriItems;
+import org.fourmur.weri.init.WeriNetwork;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,13 +19,6 @@ public final class Weri implements ModInitializer {
 	@Override
 	public void onInitialize() {
         WeriItems.initialize();
-
-        registerNetwork();
+        WeriNetwork.initialize();
 	}
-
-    private void registerNetwork() {
-        CloudMessageClientboundPayload.register();
-        CloudMessageServerboundPayload.register();
-        CloudMessageServerReceiver.register();
-    }
 }
