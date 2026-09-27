@@ -6,6 +6,7 @@
     "berserk.EntityRenderDispatcherPlayerBerserkModeRendererMixin",
     "berserk.HeldItemCustomArmRendererMixin",
     "berserk.PlayerEntityArmRendererMixin",
+    "berserk.GameMenuScreenChangeIconMixin",
     "cloudmessage.AbstractClientPlayerEntityMixin",
     "cloudmessage.ChatScreenMixin",
     "cloudmessage.ClientPlayNetworkHandlerMixin",
