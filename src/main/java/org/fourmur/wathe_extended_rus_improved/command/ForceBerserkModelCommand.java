@@ -16,6 +16,7 @@ import net.minecraft.text.Text;
 public final class ForceBerserkModelCommand {
     public static final LiteralArgumentBuilder<ServerCommandSource> COMMAND =
         CommandManager.literal("forceBerserkModel")
+            .requires(sender -> sender.hasPermissionLevel(2))
             .then(CommandManager.argument("player", EntityArgumentType.player())
                 .executes(ForceBerserkModelCommand::execute)
             );
