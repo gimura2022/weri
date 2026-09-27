@@ -2,6 +2,7 @@ package org.fourmur.weri;
 
 import org.fourmur.weri.init.WeriItems;
 import org.fourmur.weri.init.WeriNetwork;
+import org.fourmur.weri.init.WeriSounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,5 +23,6 @@ public final class Weri implements ModInitializer {
 
         WeriItems.initialize();
         WeriNetwork.initialize();
+        WeriSounds.initialize();
 	}
 }
