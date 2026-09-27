@@ -3,6 +3,7 @@ package org.fourmur.wathe_extended_rus_improved.client.entity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import software.bernie.geckolib.animatable.GeoReplacedEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.AnimatableManager.ControllerRegistrar;
@@ -32,14 +33,14 @@ public final class PlayerBerserkModeEntity implements GeoReplacedEntity {
             return state.setAndContinue(IDLE_ANIMATION);
         }));
 
-        controllers.add(new AnimationController<>(this, "Attack Controller", 5, state -> {
-            Entity entity = state.getData(DataTickets.ENTITY);
+        controllers.add(new AnimationController<>(this, "Attack Controller", 1, state -> {
+            LivingEntity entity = (LivingEntity) state.getData(DataTickets.ENTITY);
 
-            if (entity.isInPose(EntityPose.CROUCHING)) {
+            if (entity.handSwinging) {
                 return state.setAndContinue(ATTACK_ANIMATION);
             }
 
-            return PlayState.CONTINUE;
+            return PlayState.STOP;
         }));
     }
 
