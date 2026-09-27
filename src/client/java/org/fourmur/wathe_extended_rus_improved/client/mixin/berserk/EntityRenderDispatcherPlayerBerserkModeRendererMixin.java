@@ -14,6 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import com.llamalad7.mixinextras.sugar.Local;
 
+import dev.doctor4t.wathe.cca.PlayerPsychoComponent;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.EntityRenderer;
@@ -35,7 +36,8 @@ public final class EntityRenderDispatcherPlayerBerserkModeRendererMixin {
     @SuppressWarnings("unchecked")
 	@Inject(method = "getRenderer", at = @At("HEAD"), cancellable = true)
     private <T extends Entity> void getRenderer(T entity, CallbackInfoReturnable<EntityRenderer<? super T>> info) {
-        if (entity instanceof AbstractClientPlayerEntity player) {
+        if (entity instanceof AbstractClientPlayerEntity player
+                && PlayerPsychoComponent.KEY.get(player).getPsychoTicks() > 0) {
 			SkinTextures.Model model = player.getSkinTextures().model();
 			EntityRenderer<? extends PlayerEntity> entityRenderer = this.playerBerserkModeRenderers.get(model);
 
