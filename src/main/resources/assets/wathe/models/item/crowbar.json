@@ -2,8 +2,8 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "weri:item/crowbar",
-		"particle": "weri:item/crowbar"
+		"0": "weri:item/3d/crowbar",
+		"particle": "weri:item/3d/crowbar"
 	},
 	"elements": [
 		{

@@ -2,8 +2,8 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "weri:item/tape",
-		"particle": "weri:item/tape"
+		"0": "weri:item/3d/tape",
+		"particle": "weri:item/3d/tape"
 	},
 	"elements": [
 		{

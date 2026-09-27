@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "weri:item/white_noiz_music_disc"
+    "layer0": "weri:item/generated/white_noiz_music_disc"
   }
 }

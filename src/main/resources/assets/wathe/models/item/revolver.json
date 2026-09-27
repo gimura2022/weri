@@ -2,8 +2,8 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "weri:item/revolver",
-		"particle": "weri:item/revolver"
+		"1": "weri:item/3d/revolver",
+		"particle": "weri:item/3d/revolver"
 	},
 	"elements": [
 		{

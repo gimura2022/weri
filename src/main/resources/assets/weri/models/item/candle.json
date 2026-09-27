@@ -2,9 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "weri:item/candle",
-		"2": "weri:item/fire",
-		"particle": "weri:item/candle"
+		"1": "weri:item/3d/candle",
+		"2": "weri:item/3d/fire",
+		"particle": "weri:item/3d/candle"
 	},
 	"elements": [
 		{
