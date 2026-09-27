@@ -5,6 +5,7 @@
 	"mixins": [
     "berserk.EntityRenderDispatcherMixin",
     "berserk.HeldItemRendererMixin",
+    "berserk.PlayerEntityArmRendererMixin",
     "cloudmessage.AbstractClientPlayerEntityMixin",
     "cloudmessage.ChatScreenMixin",
     "cloudmessage.ClientPlayNetworkHandlerMixin",
