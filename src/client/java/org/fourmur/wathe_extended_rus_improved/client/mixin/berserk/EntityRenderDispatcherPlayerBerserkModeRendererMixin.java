@@ -25,7 +25,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.resource.ResourceManager;
 
 @Mixin(EntityRenderDispatcher.class)
-public final class EntityRenderDispatcherMixin {
+public final class EntityRenderDispatcherPlayerBerserkModeRendererMixin {
     @Shadow
 	private Map<SkinTextures.Model, EntityRenderer<? extends PlayerEntity>> modelRenderers;
 
