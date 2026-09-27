@@ -3,6 +3,9 @@
 	"package": "org.fourmur.wathe_extended_rus_improved.client.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+    "berserk.EntityRenderDispatcherPlayerBerserkModeRendererMixin",
+    "berserk.HeldItemCustomArmRendererMixin",
+    "berserk.PlayerEntityArmRendererMixin",
     "cloudmessage.AbstractClientPlayerEntityMixin",
     "cloudmessage.ChatScreenMixin",
     "cloudmessage.ClientPlayNetworkHandlerMixin",
