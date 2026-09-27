@@ -16,7 +16,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationAxis;
 
 @Mixin(HeldItemRenderer.class)
-public final class HeldItemRendererMixin {
+public final class HeldItemCustomArmRendererMixin {
     @Shadow
     private EntityRenderDispatcher entityRenderDispatcher;
 

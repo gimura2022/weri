@@ -4,7 +4,7 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
     "berserk.EntityRenderDispatcherMixin",
-    "berserk.HeldItemRendererMixin",
+    "berserk.HeldItemCustomArmRendererMixin",
     "berserk.PlayerEntityArmRendererMixin",
     "cloudmessage.AbstractClientPlayerEntityMixin",
     "cloudmessage.ChatScreenMixin",
