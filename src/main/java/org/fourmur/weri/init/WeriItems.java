@@ -33,7 +33,7 @@ public final class WeriItems {
 
         ItemGroupEvents.modifyEntriesEvent(MOD_CREATIVE_TAB_KEY).register(itemGroup -> {
             itemGroup.add(CANDLE);
-            itemGroup.add(WHITE_NOIZ_MUSIC_DISK);
+            itemGroup.add(WHITE_NOIZ_MUSIC_DISC);
         });
     }
 
