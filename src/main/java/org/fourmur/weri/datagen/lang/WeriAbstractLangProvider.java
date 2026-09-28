@@ -27,6 +27,8 @@ public abstract class WeriAbstractLangProvider extends FabricLanguageProvider {
 	@Override
 	public void generateTranslations(WrapperLookup registryLookup, TranslationBuilder builder) {
         addMusicDiscTranslation(builder, WeriJukeboxSongProvider.WHITE_NOIZ_KEY, "Silent Hill 2 - White Noiz");
+        addMusicDiscTranslation(builder, WeriJukeboxSongProvider.ORDINARY_VANITY, "Silent Hill 2 - Ordinary Vanity");
+        addMusicDiscTranslation(builder, WeriJukeboxSongProvider.MAXWELL, "Maxwell");
 
         try {
             Path exsistingTranslationPath = this.dataOutput.getModContainer()

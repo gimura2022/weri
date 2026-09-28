@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "weri:item/ordinary_vanity_music_disc"
+  }
+}

@@ -25,6 +25,8 @@ public final class WeriModelProvider extends FabricModelProvider {
 	@Override
 	public void generateItemModels(ItemModelGenerator modelGenerator) {
         modelGenerator.register(WeriItems.WHITE_NOIZ_MUSIC_DISC, FLAT_MODEL);
+        modelGenerator.register(WeriItems.ORDINARY_VANITY_MUSIC_DISC, FLAT_MODEL);
+        modelGenerator.register(WeriItems.MAXWELL_MUSIC_DISC, FLAT_MODEL);
 	}
 
     private static Model parent(String parent, TextureKey... textureKeys) {

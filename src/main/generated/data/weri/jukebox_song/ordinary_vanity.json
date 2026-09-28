@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.weri.ordinary_vanity_music_disc.desc"
+  },
+  "length_in_seconds": 100.0,
+  "sound_event": "weri:ordinary_vanity"
+}

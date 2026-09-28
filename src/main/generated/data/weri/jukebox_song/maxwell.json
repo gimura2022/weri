@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.weri.maxwell_music_disc.desc"
+  },
+  "length_in_seconds": 28.75,
+  "sound_event": "weri:maxwell"
+}
