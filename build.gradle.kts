@@ -84,6 +84,13 @@ loom {
     log4jConfigs.from(file("log4j-dev.xml"))
 }
 
+fabricApi {
+    configureDataGeneration() {
+	    modId = "weri"
+	    client = true
+    }
+}
+
 dependencies {
 	minecraft("com.mojang:minecraft:${providers.gradleProperty("minecraft_version").get()}")
     mappings("net.fabricmc:yarn:${providers.gradleProperty("yarn_mappings").get()}:v2")
