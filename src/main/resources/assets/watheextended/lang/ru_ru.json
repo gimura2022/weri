@@ -369,7 +369,7 @@
   "gui.watheextended.config.category.items.group.tape.tapetearcheckcount.desc": "Количество кликов по изоленте, которое игроки должны совершить, чтобы игрок смог снова говорить.\n\n§6По умолчанию: §e5",
   "gui.watheextended.config.category.items.group.tape.tapetearmoodchange": "Изменение настроения после кликов по ленте",
   "gui.watheextended.config.category.items.group.tape.killifcheckedatzero": "Смерть при нулевом значении настроения", 
-  "gui.watheextended.config.category.items.group.tape.killifcheckedatzero.desc": "Когда включено, попытка снять изоленту с игрока с заклееным ртом убъет его, если его настроение опустится до 0%.\n\n§6По умолчанию: §aВКЛ" 
+  "gui.watheextended.config.category.items.group.tape.killifcheckedatzero.desc": "Когда включено, попытка снять изоленту с игрока с заклееным ртом убъет его, если его настроение опустится до 0%.\n\n§6По умолчанию: §aВКЛ",
   "gui.watheextended.config.category.items.group.tape.displaysilencedtipdelay": "Задержка всплывающего сообщения",
   "gui.watheextended.config.category.items.group.tape.displaysilencedtipdelay.desc": "Задержка в секундах прежде чем всплывающее сообщение \"У этого игрока заклеен рот\" появится.\n\n§6По умолчанию: §e120",
   "gui.watheextended.config.category.items.group.jerry_can": "\uE107 Канистра с горючим",
@@ -800,7 +800,7 @@
   "announcement.goals.noellesroles.infected": "Infect the entire train.",
   "death_reason.noellesroles.infection": "the virus.",
   "tip.infected": "Use %s to infect a player!",
-  "subtitles.noellesroles.cough": "Cough"
+  "subtitles.noellesroles.cough": "Cough",
 
    "announcement.modifier.watheextended.introverted": "Интроверт",
    "announcement.modifier.watheextended.taxed": "Уклонист от налогов",
