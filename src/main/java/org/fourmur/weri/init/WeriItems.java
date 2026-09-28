@@ -1,6 +1,7 @@
 package org.fourmur.weri.init;
 
 import org.fourmur.weri.Weri;
+import org.fourmur.weri.datagen.WeriJukeboxSongProvider;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -16,7 +17,7 @@ import net.minecraft.util.Identifier;
 public final class WeriItems {
     public static final Item CANDLE = register("candle", new Item(new Item.Settings().maxCount(1)));
     public static final Item WHITE_NOIZ_MUSIC_DISC = register("white_noiz_music_disc",
-        new Item(new Item.Settings().jukeboxPlayable(WeriSounds.WHITE_NOIZ_KEY).maxCount(1)));
+        new Item(new Item.Settings().jukeboxPlayable(WeriJukeboxSongProvider.WHITE_NOIZ_KEY).maxCount(1)));
 
     public static final RegistryKey<ItemGroup> MOD_CREATIVE_TAB_KEY = RegistryKey.of(
         Registries.ITEM_GROUP.getKey(),
