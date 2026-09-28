@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 public final class WeriSounds {
     public static final SoundEvent WHITE_NOIZ = register("white_noiz");
     public static final SoundEvent ORDINARY_VANITY = register("ordinary_vanity");
+    public static final SoundEvent MAXWELL = register("maxwell");
 
     public static void initialize() {}
 

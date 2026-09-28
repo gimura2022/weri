@@ -14,5 +14,13 @@
         "stream": true
       }
     ]
+  },
+  "maxwell": {
+    "sounds": [
+      {
+        "name": "weri:maxwell",
+        "stream": true
+      }
+    ]
   }
 }

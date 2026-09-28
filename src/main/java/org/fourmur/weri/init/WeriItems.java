@@ -20,6 +20,7 @@ public final class WeriItems {
 
     public static final Item WHITE_NOIZ_MUSIC_DISC = registerMusicDisc(WeriJukeboxSongProvider.WHITE_NOIZ_KEY);
     public static final Item ORDINARY_VANITY_MUSIC_DISC = registerMusicDisc(WeriJukeboxSongProvider.ORDINARY_VANITY);
+    public static final Item MAXWELL_MUSIC_DISC = registerMusicDisc(WeriJukeboxSongProvider.MAXWELL);
 
     public static final RegistryKey<ItemGroup> MOD_CREATIVE_TAB_KEY = RegistryKey.of(
         Registries.ITEM_GROUP.getKey(),
@@ -38,6 +39,7 @@ public final class WeriItems {
 
             itemGroup.add(WHITE_NOIZ_MUSIC_DISC);
             itemGroup.add(ORDINARY_VANITY_MUSIC_DISC);
+            itemGroup.add(MAXWELL_MUSIC_DISC);
         });
     }
 
