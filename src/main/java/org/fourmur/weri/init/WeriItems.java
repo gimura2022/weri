@@ -5,6 +5,7 @@ import org.fourmur.weri.datagen.WeriJukeboxSongProvider;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.jukebox.JukeboxSong;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -16,8 +17,7 @@ import net.minecraft.util.Identifier;
 
 public final class WeriItems {
     public static final Item CANDLE = register("candle", new Item(new Item.Settings().maxCount(1)));
-    public static final Item WHITE_NOIZ_MUSIC_DISC = register("white_noiz_music_disc",
-        new Item(new Item.Settings().jukeboxPlayable(WeriJukeboxSongProvider.WHITE_NOIZ_KEY).maxCount(1)));
+    public static final Item WHITE_NOIZ_MUSIC_DISC = registerMusicDisc(WeriJukeboxSongProvider.WHITE_NOIZ_KEY);
 
     public static final RegistryKey<ItemGroup> MOD_CREATIVE_TAB_KEY = RegistryKey.of(
         Registries.ITEM_GROUP.getKey(),
@@ -35,6 +35,13 @@ public final class WeriItems {
             itemGroup.add(CANDLE);
             itemGroup.add(WHITE_NOIZ_MUSIC_DISC);
         });
+    }
+
+    private static Item registerMusicDisc(RegistryKey<JukeboxSong> key) {
+        String songName = key.getValue().getPath();
+
+        return register(songName + "_music_disc",
+            new Item(new Item.Settings().jukeboxPlayable(key).maxCount(1)));
     }
 
     private static Item register(String key, Item item) {
