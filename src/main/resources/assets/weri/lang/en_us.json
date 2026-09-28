@@ -4,6 +4,8 @@
   "item.weri.candle": "Candlestick",
   "item.weri.white_noiz_music_disc": "Music Disc",
   "item.weri.white_noiz_music_disc.desc": "Silent Hill 2 - White Noiz",
+  "item.weri.ordinary_vanity_music_disc": "Music Disc",
+  "item.weri.ordinary_vanity_music_disc.desc": "Silent Hill 2 - Ordinary Vanity",
 
   "chat.weri.message_too_long": "You message is too long!"
 }
