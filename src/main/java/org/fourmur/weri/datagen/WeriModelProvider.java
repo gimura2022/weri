@@ -13,7 +13,7 @@ import net.minecraft.data.client.TextureKey;
 import net.minecraft.util.Identifier;
 
 public final class WeriModelProvider extends FabricModelProvider {
-    public static final Model FLAT_MODEL = parent(Identifier.ofVanilla("item/generated"), TextureKey.LAYER0);
+    public static final Model GENERATED_MODEL = parent(Identifier.ofVanilla("item/generated"), TextureKey.LAYER0);
 
 	public WeriModelProvider(FabricDataOutput output) {
 		super(output);
@@ -24,9 +24,9 @@ public final class WeriModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateItemModels(ItemModelGenerator modelGenerator) {
-        modelGenerator.register(WeriItems.WHITE_NOIZ_MUSIC_DISC, FLAT_MODEL);
-        modelGenerator.register(WeriItems.ORDINARY_VANITY_MUSIC_DISC, FLAT_MODEL);
-        modelGenerator.register(WeriItems.MAXWELL_MUSIC_DISC, FLAT_MODEL);
+        modelGenerator.register(WeriItems.WHITE_NOIZ_MUSIC_DISC, GENERATED_MODEL);
+        modelGenerator.register(WeriItems.ORDINARY_VANITY_MUSIC_DISC, GENERATED_MODEL);
+        modelGenerator.register(WeriItems.MAXWELL_MUSIC_DISC, GENERATED_MODEL);
 	}
 
     private static Model parent(Identifier parent, TextureKey... textureKeys) {
