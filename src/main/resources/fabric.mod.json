@@ -11,6 +11,9 @@
 		"main": [
       "org.fourmur.weri.Weri"
     ],
+    "fabric-datagen": [
+      "org.fourmur.weri.WeriDatagen"
+    ],
     "client": [
       "org.fourmur.weri.client.WeriClient"
     ]
