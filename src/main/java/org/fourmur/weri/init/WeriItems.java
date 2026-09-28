@@ -17,7 +17,9 @@ import net.minecraft.util.Identifier;
 
 public final class WeriItems {
     public static final Item CANDLE = register("candle", new Item(new Item.Settings().maxCount(1)));
+
     public static final Item WHITE_NOIZ_MUSIC_DISC = registerMusicDisc(WeriJukeboxSongProvider.WHITE_NOIZ_KEY);
+    public static final Item ORDINARY_VANITY_MUSIC_DISC = registerMusicDisc(WeriJukeboxSongProvider.ORDINARY_VANITY);
 
     public static final RegistryKey<ItemGroup> MOD_CREATIVE_TAB_KEY = RegistryKey.of(
         Registries.ITEM_GROUP.getKey(),
@@ -33,7 +35,9 @@ public final class WeriItems {
 
         ItemGroupEvents.modifyEntriesEvent(MOD_CREATIVE_TAB_KEY).register(itemGroup -> {
             itemGroup.add(CANDLE);
+
             itemGroup.add(WHITE_NOIZ_MUSIC_DISC);
+            itemGroup.add(ORDINARY_VANITY_MUSIC_DISC);
         });
     }
 
