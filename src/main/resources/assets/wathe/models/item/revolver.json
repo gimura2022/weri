@@ -5,6 +5,7 @@
 		"1": "weri:item/3d/revolver",
 		"particle": "weri:item/3d/revolver"
 	},
+  "gui_light": "front",
 	"elements": [
 		{
 			"from": [5.70063, 5.87437, -3.25],
