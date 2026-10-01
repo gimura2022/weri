@@ -5,6 +5,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Unique;
 
+import dev.doctor4t.wathe.cca.PlayerPsychoComponent;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ChatScreen;
 import net.minecraft.text.Text;
@@ -34,6 +35,9 @@ public final class ChatScreenMixin {
 			} else {
                 if (chatText.length() > MAX_MESSAGE_LENGTH && !client.player.isCreative()) {
                     client.player.sendMessage(Text.translatable("chat.wathe-extended-rus-improved.message_too_long"));
+                    return;
+                } else if (PlayerPsychoComponent.KEY.get(client.player).getPsychoTicks() > 0 && !client.player.isCreative()) {
+                    client.player.sendMessage(Text.translatable("chat.wathe-extended-rus-improved.psycho_mode_active"));
                     return;
                 }
 
