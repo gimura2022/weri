@@ -6,7 +6,6 @@
 		"0": "weri:item/3d/lockpick",
 		"particle": "weri:item/3d/lockpick"
 	},
-  "gui_light": "front",
 	"elements": [
 		{
 			"from": [7.7, 1, 7],
@@ -77,6 +76,9 @@
 		"firstperson_lefthand": {
 			"rotation": [77, 28, 0],
 			"translation": [-1.75, 3.75, 9.5]
+		},
+		"ground": {
+			"translation": [0, 5, 0]
 		},
 		"gui": {
 			"rotation": [90, -47, 0],
