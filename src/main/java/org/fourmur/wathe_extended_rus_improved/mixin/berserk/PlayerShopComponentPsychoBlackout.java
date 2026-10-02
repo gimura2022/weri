@@ -14,6 +14,9 @@ import net.minecraft.entity.player.PlayerEntity;
 public final class PlayerShopComponentPsychoBlackout {
     @Inject(method = "usePsychoMode", at = @At("RETURN"))
     private static void usePsychoMode(@NotNull PlayerEntity player, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(cir.getReturnValue() && WorldBlackoutComponent.KEY.get(player.getWorld()).triggerBlackout());
+        WorldBlackoutComponent worldBlackout = WorldBlackoutComponent.KEY.get(player.getWorld());
+
+        if (cir.getReturnValue() && !worldBlackout.isBlackoutActive())
+            worldBlackout.triggerBlackout();
     }
 }
