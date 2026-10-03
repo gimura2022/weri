@@ -8,7 +8,7 @@ import dev.doctor4t.wathe.Wathe;
 import net.minecraft.entity.player.PlayerEntity;
 
 @Mixin(Wathe.class)
-public final class WatheDisableSupporterCheckMixin {
+public abstract class WatheDisableSupporterCheckMixin {
     @Overwrite
     public static @NotNull Boolean isSupporter(PlayerEntity player) {
         return true;

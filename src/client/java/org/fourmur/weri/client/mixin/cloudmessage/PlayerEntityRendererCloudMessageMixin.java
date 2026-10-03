@@ -15,7 +15,7 @@ import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 
 @Mixin(PlayerEntityRenderer.class)
-public final class PlayerEntityRendererCloudMessageMixin {
+public abstract class PlayerEntityRendererCloudMessageMixin {
     @Unique
     private final CloudMessageRenderer cloudMessageRenderer = new CloudMessageRenderer();
 

@@ -9,7 +9,7 @@ import dev.doctor4t.wathe.entity.PlayerBodyEntity;
 import net.minecraft.item.ItemStack;
 
 @Mixin(PlayerBodyEntity.class)
-public final class PlayerBodyEntityNullInventoryFixMixin {
+public abstract class PlayerBodyEntityNullInventoryFixMixin {
     @Overwrite
     public Iterable<ItemStack> getArmorItems() {
         return Collections.emptyList();
