@@ -12,7 +12,7 @@ import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-public final class PlayerBerserkModeEntity implements GeoReplacedEntity {
+public final class PlayerWendigoEntity implements GeoReplacedEntity {
     public static final RawAnimation IDLE_ANIMATION = RawAnimation.begin().thenLoop("misc.idle");
     public static final RawAnimation WALK_ANIMATION = RawAnimation.begin().thenLoop("move.walk");
     public static final RawAnimation RUN_ANIMATION = RawAnimation.begin().thenLoop("move.run");

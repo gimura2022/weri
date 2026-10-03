@@ -1,4 +1,4 @@
-package org.fourmur.weri.client.mixin.berserk;
+package org.fourmur.weri.client.mixin.customarmrenderer;
 
 import org.fourmur.weri.client.mixininterface.CustomPlayerArmRenderer;
 import org.spongepowered.asm.mixin.Mixin;

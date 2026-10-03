@@ -1,4 +1,4 @@
-package org.fourmur.weri.client.mixin.berserk;
+package org.fourmur.weri.client.mixin.psycho;
 
 import org.fourmur.weri.Weri;
 import org.spongepowered.asm.mixin.Mixin;

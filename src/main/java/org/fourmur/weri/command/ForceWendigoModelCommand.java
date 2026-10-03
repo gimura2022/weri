@@ -13,21 +13,21 @@ import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 
-public final class ForceBerserkModelCommand {
+public final class ForceWendigoModelCommand {
     public static final LiteralArgumentBuilder<ServerCommandSource> COMMAND =
-        CommandManager.literal("forceBerserkModel")
+        CommandManager.literal("forceWendigoModel")
             .requires(sender -> sender.hasPermissionLevel(2))
             .then(CommandManager.argument("player", EntityArgumentType.player())
-                .executes(ForceBerserkModelCommand::execute)
+                .executes(ForceWendigoModelCommand::execute)
             );
 
     private static int execute(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
         PlayerEntity player = EntityArgumentType.getPlayer(context, "player");
-        boolean forceBerserkModel = player.getAttachedOrCreate(WeriAttachments.FORCE_BERSERK_MODEL);
+        boolean forceWendigoModel = player.getAttachedOrCreate(WeriAttachments.FORCE_WENDIGO_MODEL);
 
-        context.getSource().sendFeedback(() -> Text.literal("Set berserk model flag to " + !forceBerserkModel), false);
+        context.getSource().sendFeedback(() -> Text.literal("Set wendigo model flag to " + !forceWendigoModel), false);
 
-        player.setAttached(WeriAttachments.FORCE_BERSERK_MODEL, !forceBerserkModel);
+        player.setAttached(WeriAttachments.FORCE_WENDIGO_MODEL, !forceWendigoModel);
 
         return Command.SINGLE_SUCCESS;
     }

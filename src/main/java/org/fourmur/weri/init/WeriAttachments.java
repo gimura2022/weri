@@ -8,8 +8,8 @@ import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 import net.minecraft.network.codec.PacketCodecs;
 
 public final class WeriAttachments {
-    public static final AttachmentType<Boolean> FORCE_BERSERK_MODEL = AttachmentRegistry.create(
-        Weri.id("force_berserk_model"),
+    public static final AttachmentType<Boolean> FORCE_WENDIGO_MODEL = AttachmentRegistry.create(
+        Weri.id("force_wendigo_model"),
         builder -> builder
             .initializer(() -> false)
             .syncWith(PacketCodecs.BOOL, AttachmentSyncPredicate.all())

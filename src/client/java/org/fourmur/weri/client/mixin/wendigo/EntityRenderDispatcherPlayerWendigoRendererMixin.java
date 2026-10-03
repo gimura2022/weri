@@ -1,9 +1,9 @@
-package org.fourmur.weri.client.mixin.berserk;
+package org.fourmur.weri.client.mixin.wendigo;
 
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.fourmur.weri.client.render.entity.PlayerBerserkModeRenderer;
+import org.fourmur.weri.client.render.entity.PlayerWendigoRenderer;
 import org.fourmur.weri.init.WeriAttachments;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -27,24 +27,24 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.resource.ResourceManager;
 
 @Mixin(EntityRenderDispatcher.class)
-public final class EntityRenderDispatcherPlayerBerserkModeRendererMixin {
+public final class EntityRenderDispatcherPlayerWendigoRendererMixin {
     @Shadow
 	private Map<SkinTextures.Model, EntityRenderer<? extends PlayerEntity>> modelRenderers;
 
     @Unique
-    private Map<SkinTextures.Model, PlayerBerserkModeRenderer> playerBerserkModeRenderers;
+    private Map<SkinTextures.Model, PlayerWendigoRenderer> playerWendigoRenderers;
 
     @SuppressWarnings("unchecked")
 	@Inject(method = "getRenderer", at = @At("HEAD"), cancellable = true)
     private <T extends Entity> void getRenderer(T entity, CallbackInfoReturnable<EntityRenderer<? super T>> info) {
         if (entity instanceof AbstractClientPlayerEntity player
                 && (PlayerPsychoComponent.KEY.get(player).getPsychoTicks() > 0
-                    || player.getAttachedOrCreate(WeriAttachments.FORCE_BERSERK_MODEL))) {
+                    || player.getAttachedOrCreate(WeriAttachments.FORCE_WENDIGO_MODEL))) {
 			SkinTextures.Model model = player.getSkinTextures().model();
-			EntityRenderer<? extends PlayerEntity> entityRenderer = this.playerBerserkModeRenderers.get(model);
+			EntityRenderer<? extends PlayerEntity> entityRenderer = this.playerWendigoRenderers.get(model);
 
 		    info.setReturnValue((EntityRenderer<? super T>) (entityRenderer != null ?
-                entityRenderer : this.playerBerserkModeRenderers.get(SkinTextures.Model.WIDE)));
+                entityRenderer : this.playerWendigoRenderers.get(SkinTextures.Model.WIDE)));
         }
     }
 
@@ -54,8 +54,8 @@ public final class EntityRenderDispatcherPlayerBerserkModeRendererMixin {
         CallbackInfo info,
         @Local(ordinal = 0) EntityRendererFactory.Context context
     ) {
-        this.playerBerserkModeRenderers = this.modelRenderers.entrySet()
+        this.playerWendigoRenderers = this.modelRenderers.entrySet()
             .stream()
-            .collect(Collectors.toMap(Map.Entry::getKey, x -> new PlayerBerserkModeRenderer(context, (PlayerEntityRenderer) x.getValue())));
+            .collect(Collectors.toMap(Map.Entry::getKey, x -> new PlayerWendigoRenderer(context, (PlayerEntityRenderer) x.getValue())));
     }
 }

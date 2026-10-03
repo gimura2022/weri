@@ -1,4 +1,4 @@
-package org.fourmur.weri.mixin.berserk;
+package org.fourmur.weri.mixin.psycho;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

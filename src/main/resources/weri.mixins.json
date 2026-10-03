@@ -3,9 +3,9 @@
 	"package": "org.fourmur.weri.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-    "berserk.PlayerShopComponentPsychoBlackoutMixin",
-    "berserk.GameConstantsBlackoutDurationMixin",
     "fix.PlayerBodyEntityNullInventoryFixMixin",
+    "psycho.PlayerShopComponentPsychoBlackoutMixin",
+    "psycho.GameConstantsBlackoutDurationMixin",
     "WatheDisableSupporterCheckMixin"
   ],
 	"injectors": {

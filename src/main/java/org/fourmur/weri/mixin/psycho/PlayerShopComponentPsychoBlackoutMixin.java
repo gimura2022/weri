@@ -1,4 +1,4 @@
-package org.fourmur.weri.mixin.berserk;
+package org.fourmur.weri.mixin.psycho;
 
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;

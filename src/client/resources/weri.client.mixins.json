@@ -6,16 +6,16 @@
     "accessor.EntityRendererAccessor",
     "accessor.ScreenAccessor",
     "accessor.ClientCommonNetworkHandlerAccessor",
-    "berserk.EntityRenderDispatcherPlayerBerserkModeRendererMixin",
-    "berserk.HeldItemCustomArmRendererMixin",
-    "berserk.PlayerEntityArmRendererMixin",
-    "berserk.GameMenuScreenChangeIconMixin",
     "cloudmessage.AbstractClientPlayerEntityCloudMessageQueueHolderMixin",
     "cloudmessage.ChatScreenCloudMessageSendMixin",
     "cloudmessage.ClientPlayNetworkHandlerCloudMessageSendMixin",
     "cloudmessage.PlayerEntityRendererCloudMessageMixin",
+    "customarmrenderer.HeldItemCustomArmRendererMixin",
+    "customarmrenderer.PlayerEntityArmRendererMixin",
+    "psycho.GameMenuScreenChangeIconMixin",
     "revolver.RevolverItemFlashOffsetMixin",
-    "revolver.RevolverModelLoadingPluginDisableSkinsMixin"
+    "revolver.RevolverModelLoadingPluginDisableSkinsMixin",
+    "wendigo.EntityRenderDispatcherPlayerWendigoRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

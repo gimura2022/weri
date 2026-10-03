@@ -1,7 +1,7 @@
 package org.fourmur.weri.client.render.entity;
 
 import org.fourmur.weri.Weri;
-import org.fourmur.weri.client.entity.PlayerBerserkModeEntity;
+import org.fourmur.weri.client.entity.PlayerWendigoEntity;
 
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib.animation.AnimationState;
@@ -10,16 +10,16 @@ import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.model.DefaultedEntityGeoModel;
 import software.bernie.geckolib.model.data.EntityModelData;
 
-public final class PlayerBerserkModeModel extends DefaultedEntityGeoModel<PlayerBerserkModeEntity> {
+public final class PlayerWendigoModel extends DefaultedEntityGeoModel<PlayerWendigoEntity> {
     public static final Identifier MODEL = Weri.id("wendigo");
 
-	public PlayerBerserkModeModel() {
+	public PlayerWendigoModel() {
 		super(MODEL);
 	}
 
 	@Override
-	public void setCustomAnimations(PlayerBerserkModeEntity animatable, long instanceId,
-			AnimationState<PlayerBerserkModeEntity> animationState) {
+	public void setCustomAnimations(PlayerWendigoEntity animatable, long instanceId,
+			AnimationState<PlayerWendigoEntity> animationState) {
 		super.setCustomAnimations(animatable, instanceId, animationState);
 
         GeoBone body = this.getBone("head").orElse(null);
