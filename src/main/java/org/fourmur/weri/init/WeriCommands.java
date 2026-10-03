@@ -2,12 +2,19 @@ package org.fourmur.weri.init;
 
 import org.fourmur.weri.command.ForceWendigoModelCommand;
 
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.minecraft.server.command.ServerCommandSource;
 
 public final class WeriCommands {
     public static void initialize() {
+        register(ForceWendigoModelCommand.COMMAND);
+    }
+
+    private static void register(LiteralArgumentBuilder<ServerCommandSource> command) {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
-            dispatcher.register(ForceWendigoModelCommand.COMMAND);
+            dispatcher.register(command);
         });
     }
 }
