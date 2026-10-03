@@ -14,7 +14,7 @@ import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.text.Text;
 
 @Mixin(ChatScreen.class)
-public final class ChatScreenCloudMessageSendMixin {
+public abstract class ChatScreenCloudMessageSendMixin {
     private static final int MAX_MESSAGE_LENGTH = 48;
 
     @Unique

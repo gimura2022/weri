@@ -15,7 +15,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
 @Mixin(ClientPlayNetworkHandler.class)
-public final class ClientPlayNetworkHandlerCloudMessageSendMixin {
+public abstract class ClientPlayNetworkHandlerCloudMessageSendMixin {
     @Unique
     private final ClientCommonNetworkHandlerAccessor networkHandlerAccessor =
         (ClientCommonNetworkHandlerAccessor) (Object) this;
