@@ -10,7 +10,7 @@ import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 
 @Mixin(PlayerEntityRenderer.class)
-public final class PlayerEntityArmRendererMixin implements CustomPlayerArmRenderer {
+public abstract class PlayerEntityArmRendererMixin implements CustomPlayerArmRenderer {
     @Unique
     private final PlayerEntityRenderer playerEntityRenderer = (PlayerEntityRenderer) (Object) this;
 

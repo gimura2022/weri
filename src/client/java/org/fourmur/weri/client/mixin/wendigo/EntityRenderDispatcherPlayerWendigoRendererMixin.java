@@ -27,7 +27,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.resource.ResourceManager;
 
 @Mixin(EntityRenderDispatcher.class)
-public final class EntityRenderDispatcherPlayerWendigoRendererMixin {
+public abstract class EntityRenderDispatcherPlayerWendigoRendererMixin {
     @Shadow
 	private Map<SkinTextures.Model, EntityRenderer<? extends PlayerEntity>> modelRenderers;
 

@@ -8,7 +8,7 @@ import net.minecraft.client.gui.screen.GameMenuScreen;
 import net.minecraft.util.Identifier;
 
 @Mixin(value = GameMenuScreen.class, priority = 2000)
-public final class GameMenuScreenChangeIconMixin {
+public abstract class GameMenuScreenChangeIconMixin {
     @Shadow
     private static final Identifier watheIcon = Weri.id("textures/gui/sprites/hud/wathe.png");
 }
