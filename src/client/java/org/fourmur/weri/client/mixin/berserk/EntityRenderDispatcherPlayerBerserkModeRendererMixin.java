@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.fourmur.weri.client.render.entity.PlayerBerserkModeRenderer;
-import org.fourmur.weri.index.Attachments;
+import org.fourmur.weri.init.WeriAttachments;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -39,7 +39,7 @@ public final class EntityRenderDispatcherPlayerBerserkModeRendererMixin {
     private <T extends Entity> void getRenderer(T entity, CallbackInfoReturnable<EntityRenderer<? super T>> info) {
         if (entity instanceof AbstractClientPlayerEntity player
                 && (PlayerPsychoComponent.KEY.get(player).getPsychoTicks() > 0
-                    || player.getAttachedOrCreate(Attachments.FORCE_BERSERK_MODEL))) {
+                    || player.getAttachedOrCreate(WeriAttachments.FORCE_BERSERK_MODEL))) {
 			SkinTextures.Model model = player.getSkinTextures().model();
 			EntityRenderer<? extends PlayerEntity> entityRenderer = this.playerBerserkModeRenderers.get(model);
 

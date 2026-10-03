@@ -1,6 +1,6 @@
 package org.fourmur.weri.command;
 
-import org.fourmur.weri.index.Attachments;
+import org.fourmur.weri.init.WeriAttachments;
 
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
@@ -23,11 +23,11 @@ public final class ForceBerserkModelCommand {
 
     private static int execute(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
         PlayerEntity player = EntityArgumentType.getPlayer(context, "player");
-        boolean forceBerserkModel = player.getAttachedOrCreate(Attachments.FORCE_BERSERK_MODEL);
+        boolean forceBerserkModel = player.getAttachedOrCreate(WeriAttachments.FORCE_BERSERK_MODEL);
 
         context.getSource().sendFeedback(() -> Text.literal("Set berserk model flag to " + !forceBerserkModel), false);
 
-        player.setAttached(Attachments.FORCE_BERSERK_MODEL, !forceBerserkModel);
+        player.setAttached(WeriAttachments.FORCE_BERSERK_MODEL, !forceBerserkModel);
 
         return Command.SINGLE_SUCCESS;
     }
