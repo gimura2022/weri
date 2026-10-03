@@ -10,5 +10,5 @@ import net.minecraft.util.Identifier;
 @Mixin(value = GameMenuScreen.class, priority = 2000)
 public abstract class GameMenuScreenChangeIconMixin {
     @Shadow
-    private static final Identifier watheIcon = Weri.id("textures/gui/sprites/hud/wathe.png");
+    private static final Identifier watheIcon = Weri.id("textures/gui/wendigo.png");
 }
