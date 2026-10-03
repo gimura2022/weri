@@ -11,7 +11,7 @@ import software.bernie.geckolib.model.DefaultedEntityGeoModel;
 import software.bernie.geckolib.model.data.EntityModelData;
 
 public final class PlayerBerserkModeModel extends DefaultedEntityGeoModel<PlayerBerserkModeEntity> {
-    public static final Identifier MODEL = Weri.id("berserk");
+    public static final Identifier MODEL = Weri.id("wendigo");
 
 	public PlayerBerserkModeModel() {
 		super(MODEL);
