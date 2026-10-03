@@ -1,7 +1,7 @@
 package org.fourmur.weri;
 
-import org.fourmur.weri.index.Attachments;
-import org.fourmur.weri.index.Commands;
+import org.fourmur.weri.init.WeriAttachments;
+import org.fourmur.weri.init.WeriCommands;
 import org.fourmur.weri.init.WeriItems;
 import org.fourmur.weri.init.WeriNetwork;
 import org.fourmur.weri.init.WeriSounds;
@@ -26,8 +26,7 @@ public final class Weri implements ModInitializer {
         WeriItems.initialize();
         WeriNetwork.initialize();
         WeriSounds.initialize();
-
-        Attachments.initialize();
-        Commands.initialize();
+        WeriAttachments.initialize();
+        WeriCommands.initialize();
 	}
 }
