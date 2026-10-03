@@ -1,0 +1,26 @@
+{
+	"required": true,
+	"package": "org.fourmur.weri.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+    "accessor.EntityRendererAccessor",
+    "accessor.ScreenAccessor",
+    "accessor.ClientCommonNetworkHandlerAccessor",
+    "berserk.EntityRenderDispatcherPlayerBerserkModeRendererMixin",
+    "berserk.HeldItemCustomArmRendererMixin",
+    "berserk.PlayerEntityArmRendererMixin",
+    "berserk.GameMenuScreenChangeIconMixin",
+    "cloudmessage.AbstractClientPlayerEntityCloudMessageQueueHolderMixin",
+    "cloudmessage.ChatScreenCloudMessageSendMixin",
+    "cloudmessage.ClientPlayNetworkHandlerCloudMessageSendMixin",
+    "cloudmessage.PlayerEntityRendererCloudMessageMixin",
+    "revolver.RevolverItemFlashOffsetMixin",
+    "revolver.RevolverModelLoadingPluginDisableSkinsMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

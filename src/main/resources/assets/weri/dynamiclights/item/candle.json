@@ -1,0 +1,7 @@
+{
+	"match": {
+		"items": "weri:candle"
+	},
+	"luminance": 13,
+	"water_sensitive": true
+}

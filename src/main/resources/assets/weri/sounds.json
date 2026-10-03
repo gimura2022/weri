@@ -1,0 +1,26 @@
+{
+  "white_noiz": {
+    "sounds": [
+      {
+        "name": "weri:white_noiz",
+        "stream": true
+      }
+    ]
+  },
+  "ordinary_vanity": {
+    "sounds": [
+      {
+        "name": "weri:ordinary_vanity",
+        "stream": true
+      }
+    ]
+  },
+  "maxwell": {
+    "sounds": [
+      {
+        "name": "weri:maxwell",
+        "stream": true
+      }
+    ]
+  }
+}

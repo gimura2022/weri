@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "wathe-extended-rus-improved",
+	"id": "weri",
 	"version": "${version}",
 	"name": "Wathe Extended Rus Improved",
 	"description": "A fucing cool mod for wathe realy trust me",
@@ -8,13 +8,20 @@
 	"license": "0BSD",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["org.fourmur.wathe_extended_rus_improved.WatheExtendedRusImproved"],
-    "client": ["org.fourmur.wathe_extended_rus_improved.client.WatheExtendedRusImprovedClient"]
+		"main": [
+      "org.fourmur.weri.Weri"
+    ],
+    "fabric-datagen": [
+      "org.fourmur.weri.WeriDatagen"
+    ],
+    "client": [
+      "org.fourmur.weri.client.WeriClient"
+    ]
 	},
 	"mixins": [
-		"wathe-extended-rus-improved.mixins.json",
+		"weri.mixins.json",
     {
-			"config": "wathe-extended-rus-improved.client.mixins.json",
+			"config": "weri.client.mixins.json",
 			"environment": "client"
 		}
 	],

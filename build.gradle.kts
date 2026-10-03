@@ -87,13 +87,20 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		register("wathe-extended-rus-improved") {
+		register("weri") {
 			sourceSet(sourceSets.main.get())
 			sourceSet(sourceSets.getByName("client"))
 		}
 	}
 
     log4jConfigs.from(file("log4j-dev.xml"))
+}
+
+fabricApi {
+    configureDataGeneration() {
+	    modId = "weri"
+	    client = true
+    }
 }
 
 dependencies {
