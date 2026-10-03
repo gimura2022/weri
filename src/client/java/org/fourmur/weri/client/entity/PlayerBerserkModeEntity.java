@@ -1,7 +1,6 @@
 package org.fourmur.weri.client.entity;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import software.bernie.geckolib.animatable.GeoReplacedEntity;
