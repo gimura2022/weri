@@ -11,7 +11,7 @@ import dev.doctor4t.wathe.cca.WorldBlackoutComponent;
 import net.minecraft.entity.player.PlayerEntity;
 
 @Mixin(PlayerShopComponent.class)
-public final class PlayerShopComponentPsychoBlackout {
+public final class PlayerShopComponentPsychoBlackoutMixin {
     @Inject(method = "usePsychoMode", at = @At("RETURN"))
     private static void usePsychoMode(@NotNull PlayerEntity player, CallbackInfoReturnable<Boolean> cir) {
         WorldBlackoutComponent worldBlackout = WorldBlackoutComponent.KEY.get(player.getWorld());
