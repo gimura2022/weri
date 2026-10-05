@@ -75,6 +75,15 @@ repositories {
 spotless {
     java {
         palantirJavaFormat(providers.gradleProperty("formatter_version").get())
+
+        importOrder(
+            "java", "javax", "jakarta",
+            "",
+            "org.fabricmc", "net.minecraft",
+            "",
+            "org.fourmur.weri",
+            ""
+        )
     }
 }
 
