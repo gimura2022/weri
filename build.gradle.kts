@@ -78,11 +78,8 @@ spotless {
 
         importOrder(
             "java", "javax", "jakarta",
-            "",
             "org.fabricmc", "net.minecraft",
-            "",
-            "org.fourmur.weri",
-            ""
+            "org.fourmur.weri"
         )
 
         removeUnusedImports()
