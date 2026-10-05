@@ -8,13 +8,14 @@ import net.minecraft.network.codec.PacketCodecs;
 import net.minecraft.network.packet.CustomPayload;
 
 public final record CloudMessageServerboundPayload(String message) implements CustomPayload {
-    public static final WeriNetwork.PayloadInfo<CloudMessageServerboundPayload> PAYLOAD_INFO = new WeriNetwork.PayloadInfo<>(
-        new CustomPayload.Id<>(Weri.id("cloud_message_serverbound")),
-        PacketCodec.tuple(
-            PacketCodecs.STRING, CloudMessageServerboundPayload::message,
-            CloudMessageServerboundPayload::new
-        )
-    );
+    public static final WeriNetwork.PayloadInfo<CloudMessageServerboundPayload> PAYLOAD_INFO
+        = new WeriNetwork.PayloadInfo<>(
+            new CustomPayload.Id<>(Weri.id("cloud_message_serverbound")),
+            PacketCodec.tuple(
+                PacketCodecs.STRING, CloudMessageServerboundPayload::message,
+                CloudMessageServerboundPayload::new
+            )
+        );
 
     @Override
     public Id<? extends CustomPayload> getId() {
