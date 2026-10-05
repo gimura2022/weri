@@ -13,9 +13,6 @@ public final class WeriClientNetwork {
         registerClientReceiver(CloudMessageClientReceiver.RECEIVER_INFO);
     }
 
-    public final record ClientReceiverInfo<T extends CustomPayload, R extends Runnable>(
-        WeriNetwork.PayloadInfo<T> payloadInfo, BiFunction<T, ClientPlayNetworking.Context, R> constructor) {}
-
     private static <T extends CustomPayload, R extends Runnable> void registerClientReceiver(
             ClientReceiverInfo<T, R> info) {
         ClientPlayNetworking.registerGlobalReceiver(
@@ -25,4 +22,9 @@ public final class WeriClientNetwork {
             }
         );
     }
+
+    public final record ClientReceiverInfo<T extends CustomPayload, R extends Runnable>(
+        WeriNetwork.PayloadInfo<T> payloadInfo,
+        BiFunction<T, ClientPlayNetworking.Context, R> constructor
+    ) {}
 }
