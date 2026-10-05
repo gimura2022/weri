@@ -10,7 +10,7 @@ pluginManagement {
 
 	plugins {
 		id("net.fabricmc.fabric-loom-remap") version providers.gradleProperty("loom_version")
-        id("com.github.sherter.google-java-format") version providers.gradleProperty("formatter_version")
+        id("com.diffplug.spotless") version providers.gradleProperty("spotless_version")
 	}
 }
 
