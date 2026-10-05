@@ -75,6 +75,7 @@ repositories {
 spotless {
     java {
         palantirJavaFormat(providers.gradleProperty("formatter_version").get())
+        toggleOffOn()
 
         importOrder(
             "java", "javax", "jakarta",
