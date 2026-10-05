@@ -18,14 +18,23 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 
 public final class WeriJukeboxSongProvider extends FabricDynamicRegistryProvider {
+    public static final RegistryKey<JukeboxSong> WHITE_NOIZ_KEY
+        = register("white_noiz", WeriSounds.WHITE_NOIZ, 84.0f);
+    public static final RegistryKey<JukeboxSong> ORDINARY_VANITY
+        = register("ordinary_vanity", WeriSounds.ORDINARY_VANITY, 100.0f);
+    public static final RegistryKey<JukeboxSong> MAXWELL
+        = register("maxwell", WeriSounds.MAXWELL, 28.75f);
+
     private static final Map<RegistryKey<JukeboxSong>, JukeboxSong> SONGS = new HashMap<>();
 
-    public static final RegistryKey<JukeboxSong> WHITE_NOIZ_KEY = register("white_noiz", WeriSounds.WHITE_NOIZ, 84.0f);
-    public static final RegistryKey<JukeboxSong> ORDINARY_VANITY = register("ordinary_vanity", WeriSounds.ORDINARY_VANITY, 100.0f);
-    public static final RegistryKey<JukeboxSong> MAXWELL = register("maxwell", WeriSounds.MAXWELL, 28.75f);
-
-	public WeriJukeboxSongProvider(FabricDataOutput output, CompletableFuture<WrapperLookup> registriesFuture) {
+	public WeriJukeboxSongProvider(FabricDataOutput output,
+            CompletableFuture<WrapperLookup> registriesFuture) {
 		super(output, registriesFuture);
+	}
+
+	@Override
+	public String getName() {
+		return "jukebox_song";
 	}
 
 	@Override
@@ -35,17 +44,15 @@ public final class WeriJukeboxSongProvider extends FabricDynamicRegistryProvider
         }
 	}
 
-	@Override
-	public String getName() {
-		return "jukebox_song";
-	}
-
     private static RegistryKey<JukeboxSong> register(String key, SoundEvent sound, float length) {
         return register(key, sound, length, 15);
     }
 
-    private static RegistryKey<JukeboxSong> register(String stringKey, SoundEvent sound, float length, int comparatorOutput) {
-        RegistryKey<JukeboxSong> key = RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Weri.id(stringKey));
+    private static RegistryKey<JukeboxSong> register(String stringKey, SoundEvent sound,
+            float length, int comparatorOutput) {
+        RegistryKey<JukeboxSong> key
+            = RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Weri.id(stringKey));
+
         JukeboxSong song = new JukeboxSong(
             Registries.SOUND_EVENT.getEntry(sound),
             Text.translatable("item." + Weri.MOD_ID + "." + stringKey + "_music_disc.desc"),
