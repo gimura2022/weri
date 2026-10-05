@@ -84,6 +84,8 @@ spotless {
             "org.fourmur.weri",
             ""
         )
+
+        removeUnusedImports()
     }
 }
 
