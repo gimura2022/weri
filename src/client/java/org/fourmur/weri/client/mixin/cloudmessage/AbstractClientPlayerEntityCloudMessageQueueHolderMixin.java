@@ -8,7 +8,8 @@ import org.spongepowered.asm.mixin.Unique;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 
 @Mixin(AbstractClientPlayerEntity.class)
-public abstract class AbstractClientPlayerEntityCloudMessageQueueHolderMixin implements CloudMessageQueueHolder {
+public abstract class AbstractClientPlayerEntityCloudMessageQueueHolderMixin
+        implements CloudMessageQueueHolder {
     @Unique
     private final CloudMessageQueue cloudMessageQueue = new CloudMessageQueue();
 
