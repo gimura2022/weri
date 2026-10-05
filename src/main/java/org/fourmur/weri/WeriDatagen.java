@@ -9,13 +9,13 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
 public final class WeriDatagen implements DataGeneratorEntrypoint {
-	@Override
-	public void onInitializeDataGenerator(FabricDataGenerator dataGenerator) {
+    @Override
+    public void onInitializeDataGenerator(FabricDataGenerator dataGenerator) {
         FabricDataGenerator.Pack pack = dataGenerator.createPack();
 
         pack.addProvider(WeriJukeboxSongProvider::new);
         pack.addProvider(WeriModelProvider::new);
         pack.addProvider(WeriEnglishLangProvider::new);
         pack.addProvider(WeriRussianLangProvider::new);
-	}
+    }
 }

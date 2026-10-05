@@ -1,5 +1,6 @@
 plugins {
 	id("net.fabricmc.fabric-loom-remap")
+    id("com.diffplug.spotless")
 	`maven-publish`
 }
 
@@ -81,6 +82,21 @@ repositories {
 		name = "Gegy"
 		url = uri("https://maven.gegy.dev")
 	}
+}
+
+spotless {
+    java {
+        palantirJavaFormat(providers.gradleProperty("formatter_version").get())
+        toggleOffOn()
+
+        importOrder(
+            "java", "javax", "jakarta",
+            "org.fabricmc", "net.minecraft",
+            "org.fourmur.weri"
+        )
+
+        removeUnusedImports()
+    }
 }
 
 loom {

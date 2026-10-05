@@ -3,6 +3,7 @@ package org.fourmur.weri.client.entity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+
 import software.bernie.geckolib.animatable.GeoReplacedEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.AnimatableManager.ControllerRegistrar;
@@ -20,8 +21,8 @@ public final class PlayerWendigoEntity implements GeoReplacedEntity {
 
     private final AnimatableInstanceCache geoCache = GeckoLibUtil.createInstanceCache(this);
 
-	@Override
-	public void registerControllers(ControllerRegistrar controllers) {
+    @Override
+    public void registerControllers(ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "Idle/Walk/Run Controller", 5, state -> {
             Entity entity = state.getData(DataTickets.ENTITY);
 
@@ -43,13 +44,13 @@ public final class PlayerWendigoEntity implements GeoReplacedEntity {
         }));
     }
 
-	@Override
-	public AnimatableInstanceCache getAnimatableInstanceCache() {
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
         return geoCache;
-	}
+    }
 
-	@Override
-	public EntityType<?> getReplacingEntityType() {
+    @Override
+    public EntityType<?> getReplacingEntityType() {
         return EntityType.PLAYER;
-	}
+    }
 }
