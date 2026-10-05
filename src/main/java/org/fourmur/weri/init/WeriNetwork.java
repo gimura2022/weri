@@ -13,16 +13,6 @@ import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.network.packet.CustomPayload;
 
 public final class WeriNetwork {
-    public final record PayloadInfo<T extends CustomPayload>(
-        CustomPayload.Id<T> id,
-        PacketCodec<RegistryByteBuf, T> packetCodec
-    ) {}
-
-    public final record ServerReceiverInfo<T extends CustomPayload, R extends Runnable>(
-        PayloadInfo<T> payloadInfo,
-        BiFunction<T, ServerPlayNetworking.Context, R> constructor
-    ) {}
-
     public static void initialize() {
         registerClientboundPayload(CloudMessageClientboundPayload.PAYLOAD_INFO);
         registerServerboundPayload(CloudMessageServerboundPayload.PAYLOAD_INFO);
@@ -52,4 +42,14 @@ public final class WeriNetwork {
             PayloadTypeRegistry<RegistryByteBuf> registry) {
         registry.register(info.id(), info.packetCodec());
     }
+
+    public final record PayloadInfo<T extends CustomPayload>(
+        CustomPayload.Id<T> id,
+        PacketCodec<RegistryByteBuf, T> packetCodec
+    ) {}
+
+    public final record ServerReceiverInfo<T extends CustomPayload, R extends Runnable>(
+        PayloadInfo<T> payloadInfo,
+        BiFunction<T, ServerPlayNetworking.Context, R> constructor
+    ) {}
 }
