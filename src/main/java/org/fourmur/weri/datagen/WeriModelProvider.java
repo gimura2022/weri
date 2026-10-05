@@ -13,7 +13,8 @@ import net.minecraft.data.client.TextureKey;
 import net.minecraft.util.Identifier;
 
 public final class WeriModelProvider extends FabricModelProvider {
-    public static final Model GENERATED_MODEL = parent(Identifier.ofVanilla("item/generated"), TextureKey.LAYER0);
+    public static final Model GENERATED_MODEL
+        = parent(Identifier.ofVanilla("item/generated"), TextureKey.LAYER0);
 
 	public WeriModelProvider(FabricDataOutput output) {
 		super(output);
