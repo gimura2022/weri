@@ -26,9 +26,12 @@ public abstract class WeriAbstractLangProvider extends FabricLanguageProvider {
 
 	@Override
 	public void generateTranslations(WrapperLookup registryLookup, TranslationBuilder builder) {
-        addMusicDiscTranslation(builder, WeriJukeboxSongProvider.WHITE_NOIZ_KEY, "Silent Hill 2 - White Noiz");
-        addMusicDiscTranslation(builder, WeriJukeboxSongProvider.ORDINARY_VANITY, "Silent Hill 2 - Ordinary Vanity");
-        addMusicDiscTranslation(builder, WeriJukeboxSongProvider.MAXWELL, "Maxwell");
+        addMusicDiscTranslation(builder, WeriJukeboxSongProvider.WHITE_NOIZ_KEY,
+                "Silent Hill 2 - White Noiz");
+        addMusicDiscTranslation(builder, WeriJukeboxSongProvider.ORDINARY_VANITY,
+                "Silent Hill 2 - Ordinary Vanity");
+        addMusicDiscTranslation(builder, WeriJukeboxSongProvider.MAXWELL,
+                "Maxwell");
 
         try {
             Path exsistingTranslationPath = this.dataOutput.getModContainer()
@@ -41,8 +44,10 @@ public abstract class WeriAbstractLangProvider extends FabricLanguageProvider {
         }
 	}
 
-    private void addMusicDiscTranslation(TranslationBuilder builder, RegistryKey<JukeboxSong> key, String desc) {
-        String itemTranslationKey = "item." + Weri.MOD_ID + "." + key.getValue().getPath() + "_music_disc";
+    private void addMusicDiscTranslation(TranslationBuilder builder,
+            RegistryKey<JukeboxSong> key, String desc) {
+        String itemTranslationKey = "item." + Weri.MOD_ID
+            + "." + key.getValue().getPath() + "_music_disc";
 
         builder.add(itemTranslationKey, getMusicDiscTranslation());
         builder.add(itemTranslationKey + ".desc", desc);
