@@ -1,5 +1,6 @@
 plugins {
 	id("net.fabricmc.fabric-loom-remap")
+    id("com.github.sherter.google-java-format")
 	`maven-publish`
 }
 
