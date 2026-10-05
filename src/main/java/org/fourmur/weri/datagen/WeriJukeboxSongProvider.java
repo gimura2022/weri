@@ -19,12 +19,12 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 
 public final class WeriJukeboxSongProvider extends FabricDynamicRegistryProvider {
+    private static final Map<RegistryKey<JukeboxSong>, JukeboxSong> SONGS = new HashMap<>();
+
     public static final RegistryKey<JukeboxSong> WHITE_NOIZ_KEY = register("white_noiz", WeriSounds.WHITE_NOIZ, 84.0f);
     public static final RegistryKey<JukeboxSong> ORDINARY_VANITY =
             register("ordinary_vanity", WeriSounds.ORDINARY_VANITY, 100.0f);
     public static final RegistryKey<JukeboxSong> MAXWELL = register("maxwell", WeriSounds.MAXWELL, 28.75f);
-
-    private static final Map<RegistryKey<JukeboxSong>, JukeboxSong> SONGS = new HashMap<>();
 
     public WeriJukeboxSongProvider(FabricDataOutput output, CompletableFuture<WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
