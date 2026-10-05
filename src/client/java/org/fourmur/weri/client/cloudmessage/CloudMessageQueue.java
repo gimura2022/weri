@@ -7,16 +7,6 @@ public final class CloudMessageQueue {
     public static final int MAX_ELEMENTS = 3;
     public static final double MAX_MESSAGE_LIFETIME = 80;
 
-    public final class Message {
-        public final String message;
-        public double age;
-
-        public Message(String message, double age) {
-            this.message = message;
-            this.age = age;
-        }
-    }
-
     private final List<Message> messages = new ArrayList<>();
 
     public void queueMessage(String message) {
@@ -38,4 +28,14 @@ public final class CloudMessageQueue {
 	public List<Message> getMessages() {
 		return messages;
 	}
+
+    public final class Message {
+        public final String message;
+        public double age;
+
+        public Message(String message, double age) {
+            this.message = message;
+            this.age = age;
+        }
+    }
 }
