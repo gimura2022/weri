@@ -29,7 +29,8 @@ public final class CloudMessageRenderer {
         VertexConsumerProvider vertexConsumers,
         int light
     ) {
-        List<CloudMessageQueue.Message> messages = ((CloudMessageQueueHolder) entity).weri$getQueue().getMessages();
+        List<CloudMessageQueue.Message> messages
+            = ((CloudMessageQueueHolder) entity).weri$getQueue().getMessages();
 
         for (CloudMessageQueue.Message message : messages) {
             renderMessage(
@@ -55,7 +56,8 @@ public final class CloudMessageRenderer {
         CloudMessageQueue.Message message,
         int messageIndex
     ) {
-		Vec3d pos = entity.getAttachments().getPointNullable(EntityAttachmentType.NAME_TAG, 0, entity.getYaw(tickDelta));
+		Vec3d pos = entity.getAttachments()
+            .getPointNullable(EntityAttachmentType.NAME_TAG, 0, entity.getYaw(tickDelta));
 
         if (pos == null)
             return;
@@ -71,7 +73,9 @@ public final class CloudMessageRenderer {
 
         matrices.push();
         matrices.translate(pos.x, pos.y + 0.5 + Y_OFFSET + offset, pos.z);
-        matrices.multiply(((EntityRendererAccessor) playerRenderer).weri$getDispatcher().getRotation());
+        matrices.multiply(
+            ((EntityRendererAccessor) playerRenderer).weri$getDispatcher().getRotation()
+        );
 		matrices.scale(scale, -scale, scale);
 
         TextRenderer textRenderer = playerRenderer.getTextRenderer();
