@@ -1,17 +1,17 @@
 package org.fourmur.weri.client.mixin.cloudmessage;
 
-import org.fourmur.weri.client.mixin.accessor.ScreenAccessor;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.injection.At;
-
-import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ChatScreen;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.text.Text;
+
+import org.fourmur.weri.client.mixin.accessor.ScreenAccessor;
+
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(ChatScreen.class)
 public abstract class ChatScreenCloudMessageSendMixin {
@@ -21,14 +21,11 @@ public abstract class ChatScreenCloudMessageSendMixin {
     private final ScreenAccessor screenAccessor = (ScreenAccessor) (Object) this;
 
     @WrapOperation(method = "sendMessage", at = @At(value = "INVOKE", target = "sendChatMessage"))
-    private void sendCloudMessage(ClientPlayNetworkHandler instance, String chatText,
-            Operation<Void> original) {
+    private void sendCloudMessage(ClientPlayNetworkHandler instance, String chatText, Operation<Void> original) {
         MinecraftClient client = screenAccessor.weri$getClient();
 
-        if (chatText.length() > MAX_MESSAGE_LENGTH
-                && !client.player.isCreative())
+        if (chatText.length() > MAX_MESSAGE_LENGTH && !client.player.isCreative())
             client.player.sendMessage(Text.translatable("chat.weri.message_too_long"));
-        else
-            original.call(client.player.networkHandler, chatText);
+        else original.call(client.player.networkHandler, chatText);
     }
 }

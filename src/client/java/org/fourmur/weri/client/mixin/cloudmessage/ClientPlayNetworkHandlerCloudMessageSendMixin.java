@@ -1,24 +1,24 @@
 package org.fourmur.weri.client.mixin.cloudmessage;
 
-import org.fourmur.weri.client.mixin.accessor.ClientCommonNetworkHandlerAccessor;
-import org.fourmur.weri.network.CloudMessageServerboundPayload;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
-
-import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
-import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
+import org.fourmur.weri.client.mixin.accessor.ClientCommonNetworkHandlerAccessor;
+import org.fourmur.weri.network.CloudMessageServerboundPayload;
+
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
+
 @Mixin(ClientPlayNetworkHandler.class)
 public abstract class ClientPlayNetworkHandlerCloudMessageSendMixin {
     @Unique
     private final ClientCommonNetworkHandlerAccessor networkHandlerAccessor =
-        (ClientCommonNetworkHandlerAccessor) (Object) this;
+            (ClientCommonNetworkHandlerAccessor) (Object) this;
 
     @WrapMethod(method = "sendChatMessage")
     private void sendCloudMessage(String content, Operation<Void> original) {
@@ -27,7 +27,6 @@ public abstract class ClientPlayNetworkHandlerCloudMessageSendMixin {
         if (client.interactionManager.getCurrentGameMode().isSurvivalLike()) {
             ClientPlayNetworking.send(new CloudMessageServerboundPayload(content));
             client.player.sendMessage(Text.literal(content).formatted(Formatting.ITALIC));
-        } else
-            original.call(content);
+        } else original.call(content);
     }
 }

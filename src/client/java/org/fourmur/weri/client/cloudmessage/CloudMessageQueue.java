@@ -11,23 +11,21 @@ public final class CloudMessageQueue {
 
     public void queueMessage(String message) {
         messages.add(0, new Message(message, 0));
-        
-        if (messages.size() == MAX_ELEMENTS + 1)
-            messages.remove(MAX_ELEMENTS);
+
+        if (messages.size() == MAX_ELEMENTS + 1) messages.remove(MAX_ELEMENTS);
     }
 
     public void update(float tickDelta) {
         for (Message message : messages) {
             message.age += tickDelta;
         }
- 
-        if (messages.size() != 0 && messages.getLast().age > MAX_MESSAGE_LIFETIME)
-            messages.removeLast();
+
+        if (messages.size() != 0 && messages.getLast().age > MAX_MESSAGE_LIFETIME) messages.removeLast();
     }
 
-	public List<Message> getMessages() {
-		return messages;
-	}
+    public List<Message> getMessages() {
+        return messages;
+    }
 
     public final class Message {
         public final String message;

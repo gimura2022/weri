@@ -2,15 +2,16 @@ package org.fourmur.weri.init;
 
 import java.util.function.BiFunction;
 
+import net.minecraft.network.RegistryByteBuf;
+import net.minecraft.network.codec.PacketCodec;
+import net.minecraft.network.packet.CustomPayload;
+
 import org.fourmur.weri.network.CloudMessageClientboundPayload;
 import org.fourmur.weri.network.CloudMessageServerReceiver;
 import org.fourmur.weri.network.CloudMessageServerboundPayload;
 
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
-import net.minecraft.network.RegistryByteBuf;
-import net.minecraft.network.codec.PacketCodec;
-import net.minecraft.network.packet.CustomPayload;
 
 public final class WeriNetwork {
     public static void initialize() {
@@ -22,12 +23,9 @@ public final class WeriNetwork {
 
     private static <T extends CustomPayload, R extends Runnable> void registerServerReceiver(
             ServerReceiverInfo<T, R> info) {
-        ServerPlayNetworking.registerGlobalReceiver(
-            info.payloadInfo().id(),
-            (payload, context) -> {
-                context.server().execute(info.constructor().apply(payload, context));
-            }
-        );
+        ServerPlayNetworking.registerGlobalReceiver(info.payloadInfo().id(), (payload, context) -> {
+            context.server().execute(info.constructor().apply(payload, context));
+        });
     }
 
     private static <T extends CustomPayload> void registerClientboundPayload(PayloadInfo<T> info) {
@@ -38,18 +36,14 @@ public final class WeriNetwork {
         registerPayload(info, PayloadTypeRegistry.playC2S());
     }
 
-    private static <T extends CustomPayload> void registerPayload(PayloadInfo<T> info,
-            PayloadTypeRegistry<RegistryByteBuf> registry) {
+    private static <T extends CustomPayload> void registerPayload(
+            PayloadInfo<T> info, PayloadTypeRegistry<RegistryByteBuf> registry) {
         registry.register(info.id(), info.packetCodec());
     }
 
     public final record PayloadInfo<T extends CustomPayload>(
-        CustomPayload.Id<T> id,
-        PacketCodec<RegistryByteBuf, T> packetCodec
-    ) {}
+            CustomPayload.Id<T> id, PacketCodec<RegistryByteBuf, T> packetCodec) {}
 
     public final record ServerReceiverInfo<T extends CustomPayload, R extends Runnable>(
-        PayloadInfo<T> payloadInfo,
-        BiFunction<T, ServerPlayNetworking.Context, R> constructor
-    ) {}
+            PayloadInfo<T> payloadInfo, BiFunction<T, ServerPlayNetworking.Context, R> constructor) {}
 }

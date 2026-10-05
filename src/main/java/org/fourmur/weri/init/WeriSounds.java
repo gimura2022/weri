@@ -1,11 +1,11 @@
 package org.fourmur.weri.init;
 
-import org.fourmur.weri.Weri;
-
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
+
+import org.fourmur.weri.Weri;
 
 public final class WeriSounds {
     public static final SoundEvent WHITE_NOIZ = register("white_noiz");

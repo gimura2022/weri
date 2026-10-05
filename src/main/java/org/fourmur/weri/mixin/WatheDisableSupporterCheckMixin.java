@@ -1,11 +1,11 @@
 package org.fourmur.weri.mixin;
 
+import net.minecraft.entity.player.PlayerEntity;
+
+import dev.doctor4t.wathe.Wathe;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
-
-import dev.doctor4t.wathe.Wathe;
-import net.minecraft.entity.player.PlayerEntity;
 
 @Mixin(Wathe.class)
 public abstract class WatheDisableSupporterCheckMixin {
