@@ -21,7 +21,8 @@ public abstract class ChatScreenCloudMessageSendMixin {
     private final ScreenAccessor screenAccessor = (ScreenAccessor) (Object) this;
 
     @WrapOperation(method = "sendMessage", at = @At(value = "INVOKE", target = "sendChatMessage"))
-    private void sendCloudMessage(ClientPlayNetworkHandler instance, String chatText, Operation<Void> original) {
+    private void sendCloudMessage(ClientPlayNetworkHandler instance, String chatText,
+            Operation<Void> original) {
         MinecraftClient client = screenAccessor.weri$getClient();
 
         if (chatText.length() > MAX_MESSAGE_LENGTH
