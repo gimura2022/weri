@@ -8,14 +8,22 @@ import org.fourmur.weri.client.mixininterface.CloudMessageQueueHolder;
 import org.fourmur.weri.network.CloudMessageClientboundPayload;
 import org.fourmur.weri.Weri;
 
-public final record CloudMessageClientReceiver(CloudMessageClientboundPayload payload,
-        ClientPlayNetworking.Context context) implements Runnable {
-    public static final WeriClientNetwork.ClientReceiverInfo<CloudMessageClientboundPayload, CloudMessageClientReceiver> RECEIVER_INFO =
-        new WeriClientNetwork.ClientReceiverInfo<>(CloudMessageClientboundPayload.PAYLOAD_INFO, CloudMessageClientReceiver::new);
+public final record CloudMessageClientReceiver(
+            CloudMessageClientboundPayload payload,
+            ClientPlayNetworking.Context context
+        ) implements Runnable {
+    public static final WeriClientNetwork.ClientReceiverInfo<CloudMessageClientboundPayload,
+            CloudMessageClientReceiver> RECEIVER_INFO
+        = new WeriClientNetwork.ClientReceiverInfo<>(
+            CloudMessageClientboundPayload.PAYLOAD_INFO,
+            CloudMessageClientReceiver::new
+        );
 
 	@Override
 	public void run() {
-        AbstractClientPlayerEntity sender = (AbstractClientPlayerEntity) context.client().world.getPlayerByUuid(payload.player());
+        AbstractClientPlayerEntity sender = (AbstractClientPlayerEntity) context.client()
+            .world
+            .getPlayerByUuid(payload.player());
 
         if (sender == null)
             return;
