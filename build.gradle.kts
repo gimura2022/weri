@@ -1,29 +1,21 @@
 plugins {
-	id("net.fabricmc.fabric-loom-remap")
+    id("net.fabricmc.fabric-loom-remap")
     id("com.diffplug.spotless")
-	`maven-publish`
 }
 
-fun String.runCommand(workingDir: File = file("./")): String {
-    val parts = this.split("\\s".toRegex())
-    val proc = ProcessBuilder(*parts.toTypedArray())
-        .directory(workingDir)
-        .redirectOutput(ProcessBuilder.Redirect.PIPE)
-        .redirectError(ProcessBuilder.Redirect.PIPE)
-        .start()
+version = "${providers.gradleProperty("version").get()}+${gitCommit()}"
 
-    proc.waitFor(1, TimeUnit.MINUTES)
-    return proc.inputStream.bufferedReader().readText().trim()
+tasks.register("printVersion") {
+    doLast {
+        println("version: ${version}")
+    }
 }
-
-version = providers.gradleProperty("version").get() + "+" + "git rev-parse --short HEAD".runCommand()
 
 repositories {
     exclusiveContent {
         forRepository {
-            maven {
+            maven("https://api.modrinth.com/maven") {
                 name = "Modrinth"
-                url = uri("https://api.modrinth.com/maven")
             }
         }
         filter {
@@ -31,44 +23,36 @@ repositories {
         }
     }
 
-    maven {
+    maven("https://maven.ladysnake.org/releases") {
         name = "Ladysnake Mods"
-        url = uri("https://maven.ladysnake.org/releases")
     }
 
-    maven {
+    maven("https://maven.uuid.gg/releases") {
         name = "Datasync"
-        url = uri("https://maven.uuid.gg/releases")
     }
 
-    maven {
+    maven("https://maven.maxhenkel.de/releases") {
         name = "MaxHenkel"
-        url = uri("https://maven.maxhenkel.de/releases")
     }
 
-    maven {
+    maven("https://maven.isxander.dev/releases") {
         name = "Xander Maven"
-        url = uri("https://maven.isxander.dev/releases")
     }
 
-    maven {
+    maven("https://maven.fzzyhmstrs.me/") {
         name = "FzzyMaven"
-        url = uri("https://maven.fzzyhmstrs.me/")
     }
 
-    maven {
+    maven("https://maven.maxhenkel.de/repository/public") {
         name = "henkelmax.public"
-        url = uri("https://maven.maxhenkel.de/repository/public")
     }
 
-    maven {
+    maven("https://maven.wispforest.io/releases") {
         name = "WispForest"
-        url = uri("https://maven.wispforest.io/releases")
     }
 
-    maven {
+    maven("https://maven.gegy.dev") {
 		name = "Gegy"
-		url = uri("https://maven.gegy.dev")
 	}
 }
 
@@ -175,13 +159,21 @@ tasks.jar {
 	}
 }
 
-publishing {
-	publications {
-		register<MavenPublication>("mavenJava") {
-			from(components["java"])
-		}
-	}
+fun gitCommit(): String = try {
+    "git rev-parse --short HEAD".runCommand()
+} catch (e: Exception) {
+    "unknown"
+}
 
-	repositories {
-	}
+fun String.runCommand(workingDir: File = file("./")): String {
+    val parts = this.split("\\s".toRegex())
+    val proc = ProcessBuilder(*parts.toTypedArray())
+        .directory(workingDir)
+        .redirectOutput(ProcessBuilder.Redirect.PIPE)
+        .redirectError(ProcessBuilder.Redirect.PIPE)
+        .start()
+
+    proc.waitFor(1, TimeUnit.MINUTES)
+
+    return proc.inputStream.bufferedReader().readText().trim()
 }
