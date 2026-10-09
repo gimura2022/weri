@@ -21,7 +21,15 @@ public abstract class ChatScreenCloudMessageSendMixin {
     @Unique
     private final ScreenAccessor screenAccessor = (ScreenAccessor) (Object) this;
 
-    @WrapOperation(method = "sendMessage", at = @At(value = "INVOKE", target = "sendChatMessage"))
+    // spotless:off
+    @WrapOperation(
+        method = "sendMessage",
+        at = @At(
+            value = "INVOKE",
+            target = "Lnet/minecraft/client/network/ClientPlayNetworkHandler;sendChatMessage(Ljava/lang/String;)V"
+        )
+    )
+    // spotless:on
     private void sendCloudMessage(ClientPlayNetworkHandler instance, String chatText, Operation<Void> original) {
         MinecraftClient client = screenAccessor.weri$getClient();
 
