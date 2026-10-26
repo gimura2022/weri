@@ -4,8 +4,6 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
     "fix.PlayerBodyEntityNullInventoryFixMixin",
-    "psycho.PlayerShopComponentPsychoBlackoutMixin",
-    "psycho.GameConstantsBlackoutDurationMixin",
     "WatheDisableSupporterCheckMixin"
   ],
 	"injectors": {
