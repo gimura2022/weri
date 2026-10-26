@@ -10,8 +10,8 @@
     "cloudmessage.ChatScreenCloudMessageSendMixin",
     "cloudmessage.ClientPlayNetworkHandlerCloudMessageSendMixin",
     "cloudmessage.PlayerEntityRendererCloudMessageMixin",
-    "revolver.RevolverItemFlashOffsetMixin",
-    "revolver.RevolverModelLoadingPluginDisableSkinsMixin"
+    "fix.RevolverModelLoadingPluginDisableSkinsMixin",
+    "revolver.RevolverItemFlashOffsetMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
