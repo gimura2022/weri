@@ -10,6 +10,7 @@
     "cloudmessage.ChatScreenCloudMessageSendMixin",
     "cloudmessage.ClientPlayNetworkHandlerCloudMessageSendMixin",
     "cloudmessage.PlayerEntityRendererCloudMessageMixin",
+    "fix.KnifeModelLoadingPluginDisableSkinsMixin",
     "fix.RevolverModelLoadingPluginDisableSkinsMixin",
     "revolver.RevolverItemFlashOffsetMixin"
 	],
