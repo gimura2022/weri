@@ -1,4 +1,4 @@
-package org.fourmur.weri.client.mixin.revolver;
+package org.fourmur.weri.client.mixin.fix;
 
 import dev.doctor4t.wathe.client.model.item.RevolverModelLoadingPlugin;
 import net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context;
