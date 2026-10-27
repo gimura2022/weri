@@ -12,7 +12,12 @@
     "cloudmessage.PlayerEntityRendererCloudMessageMixin",
     "fix.KnifeModelLoadingPluginDisableSkinsMixin",
     "fix.RevolverModelLoadingPluginDisableSkinsMixin",
-    "revolver.RevolverItemFlashOffsetMixin"
+    "revolver.RevolverItemFlashOffsetMixin",
+    "customarmrenderer.HeldItemCustomArmRendererMixin",
+    "customarmrenderer.PlayerEntityArmRendererMixin",
+    "psycho.GameMenuScreenChangeIconMixin",
+    "revolver.RevolverItemFlashOffsetMixin",
+    "wendigo.EntityRenderDispatcherPlayerWendigoRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

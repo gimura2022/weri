@@ -4,6 +4,7 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
     "fix.PlayerBodyEntityNullInventoryFixMixin",
+    "wendigo.PlayerPsychoComponentWendigoSpawnSoundMixin",
     "WatheDisableSupporterCheckMixin"
   ],
 	"injectors": {

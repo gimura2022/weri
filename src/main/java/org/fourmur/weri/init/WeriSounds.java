@@ -11,6 +11,9 @@ public final class WeriSounds {
     public static final SoundEvent WHITE_NOIZ = register("white_noiz");
     public static final SoundEvent ORDINARY_VANITY = register("ordinary_vanity");
     public static final SoundEvent MAXWELL = register("maxwell");
+    public static final SoundEvent WENDIGO_SPAWN = register("wendigo_spawn");
+    public static final SoundEvent WENDIGO_ATTACK = register("wendigo_attack");
+    public static final SoundEvent WENDIGO_RUN = register("wendigo_run");
 
     public static void initialize() {}
 

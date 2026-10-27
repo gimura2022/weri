@@ -2,6 +2,8 @@ package org.fourmur.weri;
 
 import net.minecraft.util.Identifier;
 
+import org.fourmur.weri.init.WeriAttachments;
+import org.fourmur.weri.init.WeriCommands;
 import org.fourmur.weri.init.WeriItems;
 import org.fourmur.weri.init.WeriNetwork;
 import org.fourmur.weri.init.WeriSounds;
@@ -21,6 +23,8 @@ public final class Weri implements ModInitializer {
         WeriItems.initialize();
         WeriNetwork.initialize();
         WeriSounds.initialize();
+        WeriAttachments.initialize();
+        WeriCommands.initialize();
     }
 
     public static Identifier id(String path) {

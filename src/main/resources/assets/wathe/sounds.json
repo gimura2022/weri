@@ -1,0 +1,8 @@
+{
+  "item.bat.hit": {
+    "replace": true,
+    "sounds": [
+      "weri:wendigo_attack"
+    ]
+  }
+}

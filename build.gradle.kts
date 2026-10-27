@@ -23,6 +23,17 @@ repositories {
         }
     }
 
+    exclusiveContent {
+        forRepository {
+            maven("https://dl.cloudsmith.io/public/geckolib3/geckolib/maven") {
+                name = "GeckoLib"
+            }
+        }
+        filter {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
+
     maven("https://maven.ladysnake.org/releases") {
         name = "Ladysnake Mods"
     }
@@ -100,6 +111,8 @@ dependencies {
 
     modCompileOnly("dev.lambdaurora.lambdynamiclights:lambdynamiclights-api:${providers.gradleProperty("lamb_dynamic_lights_version").get()}")
     modLocalRuntime("dev.lambdaurora.lambdynamiclights:lambdynamiclights-runtime:${providers.gradleProperty("lamb_dynamic_lights_version").get()}")
+
+    modImplementation("software.bernie.geckolib:geckolib-fabric-${providers.gradleProperty("minecraft_version").get()}:${providers.gradleProperty("geckolib_version").get()}")
 
     modImplementation("maven.modrinth:wathe-extended:${providers.gradleProperty("wathe_extended_version").get()}")
     modApi("dev.doctor4t:wathe:${providers.gradleProperty("wathe_version").get()}")

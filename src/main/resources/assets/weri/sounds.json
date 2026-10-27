@@ -22,5 +22,20 @@
         "stream": true
       }
     ]
+  },
+  "wendigo_spawn": {
+    "sounds": [
+      "weri:wendigo_spawn"
+    ]
+  },
+  "wendigo_attack": {
+    "sounds": [
+      "weri:wendigo_attack"
+    ]
+  },
+  "wendigo_run": {
+    "sounds": [
+      "weri:wendigo_run"
+    ]
   }
 }
