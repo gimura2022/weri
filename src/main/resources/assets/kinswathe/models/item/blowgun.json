@@ -1,0 +1,49 @@
+{
+	"format_version": "26.3",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "weri:item/3d/blowgun",
+		"particle": "weri:item/3d/blowgun"
+	},
+	"elements": [
+		{
+			"from": [7.5, 0, 5],
+			"to": [8.5, 1, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+			"faces": {
+				"north": {"uv": [2, 2, 3, 3], "texture": "#0"},
+				"east": {"uv": [0, 0, 7, 1], "texture": "#0"},
+				"south": {"uv": [2, 3, 3, 4], "texture": "#0"},
+				"west": {"uv": [0, 1, 7, 2], "texture": "#0"},
+				"up": {"uv": [0, 2, 1, 9], "texture": "#0"},
+				"down": {"uv": [1, 2, 2, 9], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 8, 0]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 8, 0]
+		},
+		"firstperson_righthand": {
+			"translation": [0, 11.5, 0]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 11.5, 0]
+		},
+		"ground": {
+			"translation": [0, 6, 0]
+		}
+	},
+	"groups": [
+		{
+			"name": "group",
+			"origin": [7, 0, 7],
+			"scope": 0,
+			"color": 0,
+			"children": [0]
+		}
+	]
+}
