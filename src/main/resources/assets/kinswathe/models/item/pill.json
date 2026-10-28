@@ -1,5 +1,5 @@
 {
-	"format_version": "1.9.0",
+	"format_version": "26.3",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"4": "weri:item/3d/pill"
@@ -34,32 +34,27 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [0, 17, 0],
+			"rotation": [173.12, 14.27, 179.77],
 			"translation": [0, 7, -1]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [0, 17, 0],
+			"rotation": [173.12, 14.27, 179.77],
 			"translation": [0, 7, -1]
 		},
 		"firstperson_righthand": {
-			"rotation": [0, 23, 0],
-			"translation": [0, 7.25, 0]
+			"rotation": [-13, 133, 0],
+			"translation": [1, 13, -0.5],
+			"scale": [1.5, 1.5, 1.5]
 		},
 		"firstperson_lefthand": {
-			"rotation": [0, 23, 0],
-			"translation": [0, 7.25, 0]
-		},
-		"ground": {
-			"translation": [0, 5.25, 0]
+			"rotation": [-13, 133, 0],
+			"translation": [1, 13, -0.5],
+			"scale": [1.5, 1.5, 1.5]
 		},
 		"gui": {
-			"rotation": [18, -160, 0],
-			"translation": [0, 11.5, 0],
-			"scale": [2, 2, 2]
-		},
-		"fixed": {
-			"translation": [0, 11.5, 0],
-			"scale": [2, 2, 2]
+			"rotation": [-12, 148, 7],
+			"translation": [1.75, 18.25, 0],
+			"scale": [3, 3, 3]
 		}
 	},
 	"groups": [
