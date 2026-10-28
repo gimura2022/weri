@@ -1,4 +1,18 @@
 {
     "announcement.role.vigilante": "Лейтенанты",
-    "announcement.title.vigilante": "Лейтенанты"
+    "announcement.title.vigilante": "Лейтенанты",
+    "category.wathe.keybinds": "Последний рейс поезда",
+    "game.player.stung": "...во сне вас что-то укусило...",
+    "game.psycho_mode.text": "Убей! Убей! Убей!",
+    "item.wathe.bat": "Атака",
+    "item.wathe.champagne": "Водка",
+    "item.wathe.cosmopolitan": "Сидр",
+    "item.wathe.mojito": "Светлое пиво",
+    "item.wathe.martini": "Тёмное пиво",
+    "item.wathe.old_fashioned": "Ягермайстер",
+    "item.wathe.revolver": "Обрез",
+    "item.wathe.scorpion": "Подушка мимик",
+    "tip.letter.tooltip1": "%s на время вашей поездки 31-го Октября 1931.",
+    "wathe.midnightconfig.title": "Последний рейс поезда - Настройки",
+    "modmenu.nameTranslation.wathe": "Последний рейс поезда"
 }
