@@ -314,6 +314,7 @@
   "gui.watheextended.config.category.items.group.note.price": "Стоимость записки в магазине.\n\n§6По умолчанию: §e10§r",
   "gui.watheextended.config.category.items.group.sulfuricacidbarrel": "\uE210 Распятие",
   "gui.watheextended.config.category.items.group.sulfuricacidbarrel.cooldown": "Откат использования распятия в секундах, после того как оно была использовано.\n\n§6По умолчанию: §e60§r",
+  "item.kinswathe.hunting_knife": "Топор",
   "gui.watheextended.config.category.items.group.huntingknife": "\uE202 Топор",
   "gui.watheextended.config.category.items.group.huntingknife.cooldown": "Откат топора в секундах после того, как он был использован.\n\n§6По умолчанию: §e45§r",
   "gui.watheextended.config.category.items.group.huntingknife.price": "Стоимость топора в магазине Охотника.\n\n§6По умолчанию: §e100§r",
