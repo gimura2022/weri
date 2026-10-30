@@ -989,7 +989,7 @@
   "announcement.goals.stupid_express.initiate": "Устраните своего врага, чтобы стать убийцей!",
   "death_reason.stupid_express.failed_initiation": "Посвящение провалено.",
 
-  "subtitles.noellesroles.role_mine_beep": "Ролевая мина бип-бикает"
-    "announcement.modifier.noellesroles.introvert": "Интроверт",
-	"gui.watheextended.guidebook.modifier.desc.noellesroles.introvert": "Вы любите одиночество. Когда вы в дали от всех, у вас открываются способности, о которых вы раньше не догадывались.",
+  "subtitles.noellesroles.role_mine_beep": "Ролевая мина бип-бикает",
+  "announcement.modifier.noellesroles.introvert": "Интроверт",
+	"gui.watheextended.guidebook.modifier.desc.noellesroles.introvert": "Вы любите одиночество. Когда вы в дали от всех, у вас открываются способности, о которых вы раньше не догадывались."
 }
