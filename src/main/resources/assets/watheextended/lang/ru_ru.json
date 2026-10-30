@@ -314,6 +314,7 @@
   "gui.watheextended.config.category.items.group.note.price": "Стоимость записки в магазине.\n\n§6По умолчанию: §e10§r",
   "gui.watheextended.config.category.items.group.sulfuricacidbarrel": "\uE210 Распятие",
   "gui.watheextended.config.category.items.group.sulfuricacidbarrel.cooldown": "Откат использования распятия в секундах, после того как оно была использовано.\n\n§6По умолчанию: §e60§r",
+  "item.kinswathe.hunting_knife": "Топор",
   "gui.watheextended.config.category.items.group.huntingknife": "\uE202 Топор",
   "gui.watheextended.config.category.items.group.huntingknife.cooldown": "Откат топора в секундах после того, как он был использован.\n\n§6По умолчанию: §e45§r",
   "gui.watheextended.config.category.items.group.huntingknife.price": "Стоимость топора в магазине Охотника.\n\n§6По умолчанию: §e100§r",
@@ -989,7 +990,7 @@
   "announcement.goals.stupid_express.initiate": "Устраните своего врага, чтобы стать убийцей!",
   "death_reason.stupid_express.failed_initiation": "Посвящение провалено.",
 
-  "subtitles.noellesroles.role_mine_beep": "Ролевая мина бип-бикает"
-    "announcement.modifier.noellesroles.introvert": "Интроверт",
-	"gui.watheextended.guidebook.modifier.desc.noellesroles.introvert": "Вы любите одиночество. Когда вы в дали от всех, у вас открываются способности, о которых вы раньше не догадывались.",
+  "subtitles.noellesroles.role_mine_beep": "Ролевая мина бип-бикает",
+  "announcement.modifier.noellesroles.introvert": "Интроверт",
+	"gui.watheextended.guidebook.modifier.desc.noellesroles.introvert": "Вы любите одиночество. Когда вы в дали от всех, у вас открываются способности, о которых вы раньше не догадывались."
 }
