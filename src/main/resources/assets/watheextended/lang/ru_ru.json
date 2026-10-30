@@ -281,9 +281,9 @@
   "gui.watheextended.config.category.items.group.knife": "\uE100 Нож",
   "gui.watheextended.config.category.items.group.knife.cooldown": "Откат использования ножа в секундах после того, как он был использован для убийства игрока.\n\n§6По умолчанию: §e60§r",
   "gui.watheextended.config.category.items.group.knife.price": "Стоимость ножа в магазине.\n\n§6По умолчанию: §e100§r",
-  "gui.watheextended.config.category.items.group.revolver": "\uE101 Обрез",
-  "gui.watheextended.config.category.items.group.revolver.cooldown": "Откат использования револьвера в секундах после того, как из него выстрелили.\n\n§6По умолчанию: §e10§r",
-  "gui.watheextended.config.category.items.group.revolver.price": "Стоимость револьвера в магазине.\n\n§6По умолчанию: §e300§r",
+  "gui.watheextended.config.category.items.group.revolver": "\uE101 Обрез ружья",
+  "gui.watheextended.config.category.items.group.revolver.cooldown": "Откат использования обреза руья в секундах после того, как из него выстрелили.\n\n§6По умолчанию: §e10§r",
+  "gui.watheextended.config.category.items.group.revolver.price": "Стоимость обреза ружья в магазине.\n\n§6По умолчанию: §e300§r",
   "gui.watheextended.config.category.items.group.revolver.backfire": "Шанс неудачного выстрела",
   "gui.watheextended.config.category.items.group.revolver.backfire.desc": "Процент того, что выстрел будет неудачным и убьет стрелка вместо его цели.\nУстановите значение 0 чтобы отключить.\n\n§6По умолчанию: §e0",
   "gui.watheextended.config.category.items.group.grenade": "\uE201 Граната",
@@ -298,7 +298,7 @@
   "gui.watheextended.config.category.items.group.crowbar": "\uE10E Лом",
   "gui.watheextended.config.category.items.group.crowbar.cooldown": "Откат использования лома в секундах после того, как им была открыта дверь.\n\n§6По умолчанию: §e10§r",
   "gui.watheextended.config.category.items.group.crowbar.price": "Стоимость лома в магазине.\n\n§6По умолчанию: §e25§r",
-  "gui.watheextended.config.category.items.group.bodybag": "\uE10D Мешок для тела",
+  "gui.watheextended.config.category.items.group.bodybag": "\uE10D Распятие",
   "gui.watheextended.config.category.items.group.bodybag.cooldown": "Откат использования мешка для тела в секундах после того, как он был использован на труп игрока.\n\n§6По умолчанию: §e300§r",
   "gui.watheextended.config.category.items.group.bodybag.price": "Стоимость мешка для тела в магазине.\n\n§6По умолчанию: §e200§r",
   "gui.watheextended.config.category.items.group.blackout": "\uE218 Отключение света",
@@ -313,7 +313,7 @@
   "gui.watheextended.config.category.items.group.note": "\uE205 Записка",
   "gui.watheextended.config.category.items.group.note.price": "Стоимость записки в магазине.\n\n§6По умолчанию: §e10§r",
   "gui.watheextended.config.category.items.group.sulfuricacidbarrel": "\uE210 Распятие",
-  "gui.watheextended.config.category.items.group.sulfuricacidbarrel.cooldown": "Откат использования распятия в секундах, после того как она была использована.\n\n§6По умолчанию: §e60§r",
+  "gui.watheextended.config.category.items.group.sulfuricacidbarrel.cooldown": "Откат использования распятия в секундах, после того как оно была использовано.\n\n§6По умолчанию: §e60§r",
   "gui.watheextended.config.category.items.group.huntingknife": "\uE202 Топор",
   "gui.watheextended.config.category.items.group.huntingknife.cooldown": "Откат топора в секундах после того, как он был использован.\n\n§6По умолчанию: §e45§r",
   "gui.watheextended.config.category.items.group.huntingknife.price": "Стоимость топора в магазине Охотника.\n\n§6По умолчанию: §e100§r",
@@ -332,12 +332,12 @@
   "gui.watheextended.config.category.items.group.blowgun.cooldown": "Откат духовой трубки в секундах после того, как она была использована.\n\n§6По умолчанию: §e60§r",
   "gui.watheextended.config.category.items.group.blowgun.price": "Стоимость духовой трубки в магазине Фармацевта.\n\n§6По умолчанию: §e175§r",
   "gui.watheextended.config.category.items.group.knockoutdrug": "\uE203 Кирпич",
-  "gui.watheextended.config.category.items.group.knockoutdrug.cooldown": "Откат Кирпича в секундах после того, как она была использована.\n\n§6По умолчанию: §e60§r",
+  "gui.watheextended.config.category.items.group.knockoutdrug.cooldown": "Откат Кирпича в секундах после того, как он была использован.\n\n§6По умолчанию: §e60§r",
   "gui.watheextended.config.category.items.group.knockoutdrug.price": "Стоимость Кирпича в магазине Похитителя.\n\n§6По умолчанию: §e75§r",
   "item.kinswathe.capture_device": "Капкан",
   "gui.watheextended.config.category.items.group.capturedevice": "\uE21E Капкан",
   "gui.watheextended.config.category.items.group.capturedevice.price": "Стоимость капкана в магазине Техника.\n\n§6По умолчанию: §e100§r",
-  "gui.watheextended.config.category.items.group.capturedevice.cooldown": "Откат капкана в секундах после того, как она была размещена.\n\n§6По умолчанию: §e60§r",
+  "gui.watheextended.config.category.items.group.capturedevice.cooldown": "Откат капкана в секундах после того, как он была размещен.\n\n§6По умолчанию: §e60§r",
   "item.kinswathe.wrench": "Гаечный ключ",
   "gui.watheextended.config.category.items.group.wrench": "\uE21D Гаечный ключ",
   "gui.watheextended.config.category.items.group.wrench.price": "Стоимость гаечного ключа в магазине Техника.\n\n§6По умолчанию: §e100§r",
@@ -611,7 +611,7 @@
   "gui.watheextended.guidebook.role.desc.wathe.killer": "Убийцы. Пассажиры, свернувшие на кривую дорожку, начав убивать. У разных людей была разная предыстория, как бы это ни звучало. Они менее опасные, нежели профессиональные убийцы, но не стоит их списывать со счетов, всё же у них нож.",
   "gui.watheextended.guidebook.role.desc.kinswathe.bellringer": "Они никогда не расстаются с часами. Некоторым кажется, будто им часы важнее родины, но нет! Они каким-то образом сохраняют время по секундам, чтобы ускорить что-либо. Возможно, часовщики это делают для себя, но в этот раз они могут спасти чью-то жизнь.",
   "gui.watheextended.guidebook.role.desc.kinswathe.bodymaker": "В чучелах есть что-то необычное, привлекающее. Так же думает и таксидермист, который в своём мастерстве не знает равных. Его услуги заказывали даже в Голливуде, чтобы не мучать животных. Однако дело его съело, свело с ума, из-за чего он начал убивать и делать чучела уже из людей. Сначала он убивал бомжей, потом обычных людей, а сейчас взялся и за элиту.",
-  "gui.watheextended.guidebook.role.desc.kinswathe.cleaner": "В какой-то момент уборщик устал от малооплачиваемой работы и решил убить своего начальника. В его голове всё ещё та сцена, где его просят о пощаде. Ему это понравилось. Теперь то он понял, что в мире понимают лишь один язык - язык силы. Но годы за промывкой полов берут своё, так что на месте преступления даже самые элитные детективы ничего не находят",
+  "gui.watheextended.guidebook.role.desc.kinswathe.cleaner": "В какой-то момент уборщик устал от малооплачиваемой работы и решил изгнать своего начальника. В его голове всё ещё та сцена, где его просят о пощаде. Ему это понравилось. Теперь то он понял, что в мире понимают лишь один язык - язык силы. Но годы за промывкой полов берут своё, так что на месте преступления даже самые элитные экзорцисты ничего не находят",
   "gui.watheextended.guidebook.role.desc.kinswathe.cook": "Ещё один член экипажа. Был приглашён на поезд, ведь тут едут сливки общества, которым нужны только лучшие блюда! Только не списывайте его со счетов, ведь с его сковородки ещё не улизнула ни одна рыбина!",
   "gui.watheextended.guidebook.role.desc.kinswathe.detective": "Умный, сильный, стройный и просто хороший человек. Неизвестно, почему он решил стать детективом, ведь с его интеллектом он мог пойти далеко.",
   "gui.watheextended.guidebook.role.desc.kinswathe.dreamer": "У мечтателя с детства было одно желание - помогать людям. В какой-то момент жизни он зарылся с головой в работу и что-то придумал... Теперь при желании он может спасать людей, поставив на них свою печать. Кто-то будет ему руки целовать, а кто-то возненавидит....",
@@ -642,7 +642,7 @@
   "gui.watheextended.guidebook.role.desc.noellesroles.voodoo": "Член старой вудуистской секты, который ,хер знает зачем, решил прокатиться на поезде. Может быть, распространить свою религию? Только он и знает. Но самое страшное - это то, что этот культ необычен. Он один из тех, кто был у истоков и не ушёл от традиций, а поэтому боги Вуду на его стороне, и они хотят жертвоприношений.",
 "gui.watheextended.guidebook.role.desc.noellesroles.infected": "Этот пассажир ещё на перроне подавал признаки того, что перед поездкой подхватил какую-то заразу. Кажется, он - нулевой пациент, разносящий бацилы непонятной эпидемии по всему составу. Эта ситуация вам тоооочно ничего не напоминает. Возможно, если экипаж избавится от него, а тело отправит в сибироязвенный скотомогильник, это магическим образом поможет.",
 
-  "gui.watheextended.guidebook.role.desc.noellesroles.recon": "Тишина....",
+  "gui.watheextended.guidebook.role.desc.noellesroles.recon": "Элитный шпион из организации по сбору данных. Одним взглядом он уже может примерно оценить ваши базовые качества, как человека. Возможно, будь этот человек более добр, он бы принес обществу большую пользу, чем сейчас. Кто знает, что привело его в это дело..",
 
   "gui.watheextended.guidebook.role.desc.noellesroles.vulture": "\"Мы то, что мы едим\", сказал какой-то умный человек, это засело в голову гурману и он решил стать человеком! Хотя, кто знает, может его укусил мертвяк? Но это не важно, а вот, что действительно важно - так это то, что прибывая на поезд, гурман очень голодный. Но даже если он и насытиться, то про запасы забывать не стоит, так что он становится только опаснее, когда сытый.",
   "gui.watheextended.guidebook.role.desc.starexpress.muzzler": "Тишина – залог успеха. Акустик предпочитает скрытный и бесшумный подход, используя свою уникальную тактику: заткнуть рот жертве и перерезать горло в скромном уголке, где темно и сыро... Кто знает, может, его любимая игра Metal Gear?",
@@ -720,7 +720,7 @@
   "gui.watheextended.guidebook.item.poison_injector.desc": "ПКМ по игроку для отравления. Если игрок уже отравлен, то он умрёт мгновенно.",
   "gui.watheextended.guidebook.item.poison_vial.desc": "ПКМ по блюду с едой или напитками для их отравления. Первый, кто выпьет оттуда, отравится, а после умрёт. Лох.",
   "gui.watheextended.guidebook.item.psycho_mode.desc": "Активирует 'Режим психа'. Выдаёт биту, которая мгновенно убивает любого, но нельзя использовать ничего, кроме неё",
-  "gui.watheextended.guidebook.item.revolver.desc": "ПКМ для выстрела. Выпадает, если был убит невиновый (не может быть подобран убийцей или тем, у кого уже есть револьвер).",
+  "gui.watheextended.guidebook.item.revolver.desc": "ПКМ для выстрела. Выпадает, если был убит невиновый (не может быть подобран убийцей, или тем, у кого уже есть револьвер).",
   "gui.watheextended.guidebook.item.role_mine.desc": "Размещается на земле. Определяет роли первых трёх игроков, что пройдут по ней.",
   "gui.watheextended.guidebook.item.scorpion.desc": "ПКМ по кровати для её отравления. Если игрок ляжет на эту кровать - он отравится.",
   "gui.watheextended.guidebook.item.sulfuric_acid_barrel.desc": "ПКМ по трупу, чтобы полностью его уничтожить, затерев все следы.",
@@ -802,7 +802,7 @@
   "tip.infected": "Используйте %s для заражения игрока!",
   "subtitles.noellesroles.cough": "Кашель",
 
-   "announcement.modifier.watheextended.introverted": "Интроверт",
+   "announcement.modifier.watheextended.introverted": "Социофоб",
    "announcement.modifier.watheextended.taxed": "Уклонист от налогов",
    "announcement.modifier.watheextended.adaptive": "Гибкость ума",
    "announcement.modifier.allergic": "Аллергик",
@@ -822,7 +822,7 @@
 
 
 
-    "announcement.role.kinswathe.hacker": "Разведчик",
+    "announcement.role.kinswathe.hacker": "Хакер",
     "announcement.role.kinswathe.bellringer": "Часовой",
     "announcement.role.kinswathe.bodymaker": "Таксидермист",
     "announcement.role.kinswathe.cleaner": "Культист",
@@ -879,7 +879,7 @@
 
   "announcement.goals.kinswathe.bodymaker": "Делайте поддельные трупы для озадачивания пассажиров.",
 
-  "announcement.goals.kinswathe.cleaner": "Уберите все улики!",
+  "announcement.goals.kinswathe.cleaner": "Изгоните все трупы с их душами! И возможно не только их..",
 
   "announcement.goals.kinswathe.cook": "Вы можете видеть людей, которые недавно ели!",
 
@@ -990,4 +990,6 @@
   "death_reason.stupid_express.failed_initiation": "Посвящение провалено.",
 
   "subtitles.noellesroles.role_mine_beep": "Ролевая мина бип-бикает"
+    "announcement.modifier.noellesroles.introvert": "Интроверт",
+	"gui.watheextended.guidebook.modifier.desc.noellesroles.introvert": "Вы любите одиночество. Когда вы в дали от всех, у вас открываются способности, о которых вы раньше не догадывались.",
 }
