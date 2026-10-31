@@ -9,7 +9,6 @@
     "cloudmessage.AbstractClientPlayerEntityCloudMessageQueueHolderMixin",
     "cloudmessage.ChatScreenCloudMessageSendMixin",
     "cloudmessage.ClientPlayNetworkHandlerCloudMessageSendMixin",
-    "cloudmessage.KeyBindingAllowChatOpeningMixin",
     "cloudmessage.PlayerEntityRendererCloudMessageMixin",
     "fix.KnifeModelLoadingPluginDisableSkinsMixin",
     "fix.RevolverModelLoadingPluginDisableSkinsMixin",
