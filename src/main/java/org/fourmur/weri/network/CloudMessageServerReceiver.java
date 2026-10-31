@@ -1,6 +1,10 @@
 package org.fourmur.weri.network;
 
+import net.minecraft.network.packet.s2c.play.PlaySoundS2CPacket;
+import net.minecraft.registry.Registries;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 
 import org.fourmur.weri.init.WeriNetwork;
 
@@ -24,6 +28,16 @@ public final record CloudMessageServerReceiver(
         for (ServerPlayerEntity player :
                 PlayerLookup.around(sender.getServerWorld(), sender.getPos(), SENDING_RADIUS)) {
             ServerPlayNetworking.send(player, new CloudMessageClientboundPayload(payload.message(), sender.getUuid()));
+
+            player.networkHandler.sendPacket(new PlaySoundS2CPacket(
+                    Registries.SOUND_EVENT.getEntry(SoundEvents.BLOCK_AMETHYST_CLUSTER_HIT),
+                    SoundCategory.PLAYERS,
+                    sender.getX(),
+                    sender.getY(),
+                    sender.getZ(),
+                    1f,
+                    1f,
+                    player.getRandom().nextLong()));
         }
     }
 }
